@@ -1,0 +1,21 @@
+/institutions:
+  post:
+    tags:
+      - Institution
+    summary: Create a institution
+    description: Create a institution
+    operationId: createInstitution
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Institution'
+    responses:
+      '201':
+        $ref: '#/components/schemas/Institution'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'

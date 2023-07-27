@@ -1,0 +1,116 @@
+{
+  "id": "17ba2033-1c12-463b-bbc7-72deed747ae8",
+  "status": "PENDING",
+  "signers": [],
+  "createdAt": "2019-01-09T02:34:11.341Z",
+  "statusEmailBody": null,
+  "statusEmailSubject": null,
+  "statusUpdatedAt": null,
+  "statusUpdatedBy": null,
+  "contractDocumentCreatedAt": null,
+  "contractDocumentEnvelopeStatus": null,
+  "contractDocumentEnvelopeStatusUpdatedAt": null,
+  "bsa": {
+    "risk": null,
+    "score": 0
+  },
+  "contract": {
+    "uri": null
+  },
+  "productConfigurations": [
+    {
+      "initialDeposit": 250000099,
+      "productId": "3552ab85-08da-4bb5-be00-9e94d282d310",
+      "createdAt": "2019-03-16T12:34:11.341Z",
+      "product": {
+        "id": "3552ab85-08da-4bb5-be00-9e94d282d310",
+        "name": "Simple Checking",
+        "sku": "simple-checking",
+        "category": "CHECKING",
+        "options": [
+          {
+            "id": null,
+            "category": "account_number",
+            "key": "account_number",
+            "title": "Account Number",
+            "value": "001",
+            "lead": null,
+            "annotation": null,
+            "parentId": null
+          },
+          {
+            "id": "7b9c52a2-c542-4031-8342-5fa29a2f6d0e",
+            "category": "another-choice",
+            "key": "optionB",
+            "title": "Option B",
+            "value": "B",
+            "lead": "Option B lead",
+            "annotation": "Option B annotation",
+            "parentId": "3552ab85-0000-0000-0000-9e94d282d312"
+          },
+          {
+            "id": null,
+            "category": "some-choice",
+            "key": "optionA",
+            "title": "Option A",
+            "value": "A",
+            "lead": null,
+            "annotation": null,
+            "parentId": null
+          }
+        ],
+        "summary": "Simple checking means no fees with online statements and it means no minimum balance required to maintain the account, access to online banking, bill pay and more. You get the benefits you want.",
+        "content": "<p>Simple checking <strong>lorem ipsum</strong> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n",
+        "createdAt": "2020-02-06T12:32:03.341Z"
+      }
+    },
+    {
+      "initialDeposit": 500099,
+      "productId": "3552ab85-08da-4bb5-be00-9e94d282d340",
+      "createdAt": "2019-01-10T02:34:11.341Z",
+      "product": {
+        "id": "3552ab85-08da-4bb5-be00-9e94d282d340",
+        "name": "Simple Checking",
+        "sku": "PRD-002",
+        "options": [
+          {
+            "id": null,
+            "category": "account_number",
+            "key": "account_number",
+            "title": "Account Number",
+            "value": "002",
+            "lead": null,
+            "annotation": null,
+            "parentId": null
+          },
+          {
+            "id": "9a8a47ee-6880-4b5d-aa44-0b07b608783f",
+            "category": "solo-choice",
+            "key": "optionC",
+            "title": "Option C",
+            "value": "C",
+            "lead": "Option C lead",
+            "annotation": "Option C annotation",
+            "parentId": "3552ab85-0000-0000-0000-9e94d282d312"
+          }
+        ],
+        "category": "CHECKING",
+        "summary": "Simple checking means no fees with online statements and it means no minimum balance required to maintain the account, access to online banking, bill pay and more. You get the benefits you want.",
+        "content": "<p>Simple checking <strong>lorem ipsum</strong> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n",
+        "createdAt": "2020-03-06T12:32:03.341Z"
+      }
+    }
+  ],
+  "branchId": null,
+  "branch": null,
+  "verificationStatus": {
+    "faceStatus": "PENDING",
+    "documentStatus": "PENDING",
+    "addressStatus": "PENDING",
+    "sanctionsStatus": "PENDING",
+    "mediaStatus": "PENDING",
+    "politicalExposure": "PENDING"
+  },
+  "referredBy": null,
+  "referrers": []
+}

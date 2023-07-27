@@ -1,0 +1,80 @@
+<accountRequest updatedAt="2019-03-17T12:03:34" updatedBy="demouser@nimblefi.com" branchCode="b001">
+  <id>2552ab85-08da-4bb5-be00-9e94d282d348</id>
+  <documents signedAt="2019-03-17T13:03:34">
+    <document name="someFileName" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.someFileName.pdf"/>
+    <document name="anotherFileName" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.anotherFileName.pdf"/>
+    <document name="thirdFileName" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/EXPRT000.thirdFileName.pdf"/>
+  </documents>
+  <bsa>
+    <score>2</score>
+    <questions/>
+  </bsa>
+  <signers>
+    <signer>
+      <id>2e31d8c0-1226-4651-8a5d-4bd8aa454722</id>
+      <dateOfBirth>1966-03-16</dateOfBirth>
+      <email>example@nimblefi.com</email>
+      <firstName>George</firstName>
+      <middleName/>
+      <lastName>Constanza</lastName>
+      <phoneNumber/>
+      <ssn/>
+      <role>PRIMARY</role>
+      <employer>Singular</employer>
+      <address>
+        <street/>
+        <city/>
+        <state/>
+        <zipCode/>
+      </address>
+      <proof documentType="PASSPORT">
+        <passport>
+          <number>1112221112</number>
+          <expirationDate>2022-02-16</expirationDate>
+          <issuedDate>2011-02-16</issuedDate>
+          <issuer>PRT</issuer>
+          <documents>
+            <document name="passport" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/a74f9092-5889-430a-9c19-6712f9f68090.png"/>
+          </documents>
+        </passport>
+      </proof>
+    </signer>
+    <signer>
+      <id>2e31d8c0-1226-4651-8a5d-4bd8aa454721</id>
+      <dateOfBirth>1945-03-16</dateOfBirth>
+      <email>psousa+dev1@wearesingular.com</email>
+      <firstName>John</firstName>
+      <middleName/>
+      <lastName>McClane</lastName>
+      <phoneNumber/>
+      <ssn/>
+      <role>SECONDARY</role>
+      <employer/>
+      <address>
+        <street/>
+        <city/>
+        <state/>
+        <zipCode/>
+      </address>
+      <proof documentType="PASSPORT">
+        <passport>
+          <number>555444333</number>
+          <expirationDate>2033-02-16</expirationDate>
+          <issuedDate>2000-02-16</issuedDate>
+          <issuer>USA</issuer>
+          <documents>
+            <document name="passport" location="/requests/da31cf6d-f10c-43a1-a67e-e80ad124c223/a74f9092-5889-430a-9c19-6712f9f68090.png"/>
+          </documents>
+        </passport>
+      </proof>
+    </signer>
+  </signers>
+  <productConfigurations>
+    <productConfiguration product_sku="simple-checking">
+      <productOption category="product_config" key="initial_deposit" value="250000099"/>
+      <productOption category="product_config" key="account_number" value="001"/>
+      <productOption category="another-choice" key="optionB" value="B"/>
+      <productOption category="some-choice" key="optionA" value="A"/>
+    </productConfiguration>
+  </productConfigurations>
+</accountRequest>

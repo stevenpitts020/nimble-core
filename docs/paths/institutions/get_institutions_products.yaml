@@ -1,0 +1,48 @@
+/institutions/{id}/products:
+  get:
+    tags:
+      - Institution
+    summary: Get a list of products of a institution
+    description: Method to get a list of products
+    operationId: listProducts
+    parameters:
+      - name: id
+        in: path
+        description: Id of the Institution
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+      - name: content-format
+        in: query
+        description: The format of the content property
+        required: true
+        default: html
+        schema:
+          type: string
+          enum: ['html']
+      - name: sort
+        in: query
+        required: false
+        description: Sort products by property
+        schema:
+          type: string
+          enum:
+            - id
+            - -id
+            - name
+            - -name
+          default: name
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Product'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '404':
+        $ref: '#/components/responses/NotFound'

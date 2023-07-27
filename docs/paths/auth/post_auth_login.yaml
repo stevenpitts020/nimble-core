@@ -1,0 +1,22 @@
+/auth/login:
+  post:
+    tags:
+      - Auth
+    description: Authenticates a user with local email/password
+    operationId: authLogin
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UserLogin'
+      description: User login object to be authenticated
+      required: true
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserToken'
+      '401':
+        $ref: '#/components/responses/Unauthorized'

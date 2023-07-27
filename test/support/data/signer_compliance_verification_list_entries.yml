@@ -1,0 +1,39 @@
+- id: '20000000-0000-accc-0000-00bbbbbbb221'
+  name: 'Some strange news'
+  source: 'complyadvantage'
+  value: 'Chairperson Of The African Union'
+  date: '2008-12-06'
+  deleted_date: null
+  url: 'https://github.com/typescript-cheatsheets/react'
+  type: 'ADVERSE-MEDIA'
+  subtype: 'adverse-media'
+  country_codes: 'UK'
+  signer_compliance_verification_item_id: '1e31d8c0-1226-4651-8a5d-4bd8aa454721'
+  created_at: 2020-09-16T11:35:11.734Z
+  updated_at: 2020-09-16T11:35:11.734Z
+- id: '20000000-0000-accc-0000-00bbbbbbb222'
+  name: 'This is some serious warning'
+  source: 'complyadvantage'
+  value: 'Chairperson Of The African Union'
+  date: '2020-12-06'
+  deleted_date: null
+  url: 'https://github.com'
+  type: 'WARNING'
+  subtype: 'pep-1'
+  country_codes: 'UK'
+  signer_compliance_verification_item_id: '1e31d8c0-1226-4651-8a5d-4bd8aa454721'
+  created_at: 2020-09-16T11:35:11.734Z
+  updated_at: 2020-09-16T11:35:11.734Z
+- id: '20000000-0000-accc-0000-00bbbbbbb223'
+  name: 'This was one day a warning'
+  source: 'complyadvantage'
+  value: 'Something fishy'
+  date: '2019-01-01'
+  deleted_date: '2020-01-01'
+  url: 'https://github.com'
+  type: 'WARNING'
+  subtype: 'pep-1, warning, some-type'
+  country_codes: 'PT'
+  signer_compliance_verification_item_id: '1e31d8c0-1226-4651-8a5d-4bd8aa454721'
+  created_at: 2020-09-16T11:35:11.734Z
+  updated_at: 2020-09-16T11:35:11.734Z

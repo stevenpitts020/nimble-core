@@ -1,0 +1,21 @@
+/institutions/{domain}:
+  get:
+    tags:
+      - Institution
+    summary: Get an institution
+    description: Method to get an Institution
+    operationId: getInstitution
+    parameters:
+      - name: domain
+        in: path
+        description: Domain for the Institution
+        required: true
+        schema:
+          type: string
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/components/schemas/Institution'
+      '404':
+        $ref: '#/components/responses/NotFound'

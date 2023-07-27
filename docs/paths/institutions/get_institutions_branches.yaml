@@ -1,0 +1,41 @@
+/institutions/{id}/branches:
+  get:
+    tags:
+      - Institution
+    summary: Get a paginated list of institution branches
+    description: Method to get Institution branches
+    operationId: getInstitutionBranches
+    parameters:
+      - name: id
+        in: path
+        description: Id of the Institution
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+      - name: limit
+        in: query
+        required: false
+        description: Limit number of records
+        schema:
+          type: integer
+      - name: offset
+        in: query
+        required: false
+        description: Offset for paginating records
+        schema:
+          type: integer
+          default: 0
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/InstitutionBranch'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '404':
+        $ref: '#/components/responses/NotFound'

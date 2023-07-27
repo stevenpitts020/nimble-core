@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+const fs = require('fs')
+
+// function to encode file data to base64 encoded string
+function base64Encode(file) {
+  // read binary data
+  const bitmap = fs.readFileSync(file);
+  // convert binary data to base64 encoded string
+  return Buffer.from(bitmap).toString('base64');
+}
+
+const path = process.env['IMAGE_PATH']
+// console.log('Convert %s to base64', path)
+const base64 = base64Encode(path)
+
+const https = require('http')
+const data = JSON.stringify({
+  format: 'image',
+  content: base64
+})
+
+const options = {
+  hostname: 'localhost',
+  port: 8080,
+  path: '/v1/documents',
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Content-Length': data.length
+  }
+}
+
+const req = https.request(options, res => {
+  console.log(`statusCode: ${res.statusCode}`)
+
+  res.on('data', d => {
+    process.stdout.write(d)
+  })
+})
+
+req.on('error', error => {
+  console.error(error)
+})
+
+req.write(data)
+req.end()

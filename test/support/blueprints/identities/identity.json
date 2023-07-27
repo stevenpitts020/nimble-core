@@ -1,0 +1,14 @@
+{
+  "firstName": "Sample",
+  "middleName": "",
+  "lastName": "Specimen",
+  "address": "123 main street apt. 1",
+  "city": "Orlando",
+  "state": "FL",
+  "zipCode": "17101-0000",
+  "dateOfBirth": "1990-03-18",
+  "documentNumber": "S123-456-78-123-0",
+  "documentExpirationDate": "2025-03-18",
+  "documentIssuedDate": "2018-03-18",
+  "documentIssuer": ""
+}

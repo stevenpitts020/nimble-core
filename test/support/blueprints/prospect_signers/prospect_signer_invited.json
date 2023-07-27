@@ -1,0 +1,29 @@
+{
+  "id": "00000000-9999-aaaa-0000-2ea08a01e903",
+  "firstName": null,
+  "middleName": null,
+  "lastName": null,
+  "dateOfBirth": null,
+  "email": "signer-invited03@nimblefi.com",
+  "phoneNumber": null,
+  "address": null,
+  "city": null,
+  "state": null,
+  "zipCode": null,
+  "employer": null,
+  "ssn": null,
+  "consent": false,
+  "consentAccountOpening": false,
+  "consentPrivacyPolicy": false,
+  "consentCommunication": false,
+  "selfieDocumentId": null,
+  "idProofDocument": {
+    "type": "USDL",
+    "number": null,
+    "expirationDate": null,
+    "issuedDate": null,
+    "issuer": null,
+    "frontDocumentId": null,
+    "backDocumentId": null
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "statements": 70,
+  "branches": 40,
+  "functions": 70,
+  "lines": 70,
+  "reporter": [ "text", "cobertura", "html" ],
+  "all": true,
+  "check-coverage": true,
+  "report-dir": "./coverage",
+  "cache": false,
+  "exclude": [
+    "seeds/",
+    "coverage/",
+    "migrations/",
+    "scripts/",
+    "config/",
+    "test/",
+    "worker.js",
+    "subscribers.js"
+  ]
+}

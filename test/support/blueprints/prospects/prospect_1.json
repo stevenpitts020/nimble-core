@@ -1,0 +1,65 @@
+{
+  "institutionId": "2552ab85-08da-4bb5-be00-9e94d282d311",
+  "invitees": [
+    {
+      "id": "837c8ea9-a7bd-4289-9530-61414235b014",
+      "email": "sgt.al.powell@wearesingular.com",
+      "role": "SECONDARY"
+    },
+    {
+      "id": "ed0e8eff-fa08-4cff-bcfd-e9338d6e16d0",
+      "email": "zeuscarver@wearesingular.com",
+      "role": "SECONDARY"
+    }
+  ],
+  "signer": {
+    "selfieDocumentId": "a74f9092-5889-430a-9c19-6712f9f68090",
+    "firstName": "John",
+    "middleName": "MF",
+    "lastName": "McClane",
+    "dateOfBirth": "1955-05-22T00:00:00.000Z",
+    "email": "john.mf.mcclane@wearesingular.com",
+    "phoneNumber": "+1718-953-8465",
+    "address": "1381 Atlantic Ave, Brooklyn",
+    "city": "New York",
+    "state": "NY",
+    "zipCode": "NY11216",
+    "ssn": "111-22-3333",
+    "employer": "New York Police Dep.",
+    "consent": true,
+    "consentAccountOpening": true,
+    "consentPrivacyPolicy": true,
+    "consentCommunication": false,
+    "idProofDocument": {
+      "backDocumentId": "a74f9092-5889-430a-9c19-6712f9f68090",
+      "frontDocumentId": "a74f9092-5889-430a-9c19-6712f9f68090",
+      "type": "USDL",
+      "number": "1231231230",
+      "issuedDate": "2000-11-22T00:00:00.000Z",
+      "issuer": "WY",
+      "expirationDate": "2030-11-22T00:00:00.000Z"
+    }
+  },
+  "bsaRiskResults": [
+    {
+      "position": 0,
+      "questionId": "are-all-account-owners",
+      "answer": "Yes"
+    },
+    {
+      "position": 1,
+      "questionId": "will-you-mantain",
+      "answer": null
+    },
+    {
+      "position": 3,
+      "questionId": "name-bank",
+      "answer": "Gotham City Bank"
+    },
+    {
+      "position": 4,
+      "questionId": "usCitizen",
+      "answer": "No"
+    }
+  ]
+}

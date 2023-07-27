@@ -1,0 +1,25 @@
+UserAuth:
+  type: object
+  required:
+    - email
+    - firstName
+    - lastName
+    - institutionId
+  properties:
+    email:
+      type: string
+      title: Email
+      description: The email of the user
+    firstName:
+      type: string
+      title: First Name
+      description: The first name of the user
+    lastName:
+      type: string
+      title: Last Name
+      description: The last name of the user
+    institutionId:
+      type: string
+      format: uuidv4
+      title: Institution Id
+      description: The institution id

@@ -1,0 +1,32 @@
+/signers/{id}:
+  get:
+    tags:
+      - Signer
+    summary: Get Signer by Id
+    description: fetch signer by Id
+    parameters:
+      - in: path
+        name: id
+        description: uuid signer id
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+    security:
+      - bearer: []
+      - bearer: ['signers']
+    responses:
+      '200':
+        description: Signer information
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Signer'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'
+      '403':
+        $ref: '#/components/responses/Forbidden'
+      '404':
+        $ref: '#/components/responses/NotFound'

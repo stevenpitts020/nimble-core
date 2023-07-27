@@ -1,0 +1,38 @@
+/signers/{id}/email-verifications/{verificationId}:
+  put:
+    tags:
+      - Signer
+    summary: Consume a Signer Email Verification
+    description: Used to consument a verification send via email
+    parameters:
+      - in: path
+        name: id
+        description: uuid signer id
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+      - in: path
+        name: verificationId
+        description: signer email verification id
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+    security:
+      - bearer: []
+    responses:
+      '204':
+        description: OK
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'
+      '403':
+        $ref: '#/components/responses/Forbiden'
+      '404':
+        $ref: '#/components/responses/NotFound'
+      '409':
+        $ref: '#/components/responses/Conflict'
+      '412':
+        $ref: '#/components/responses/PreCondition'

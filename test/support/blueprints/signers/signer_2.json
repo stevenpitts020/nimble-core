@@ -1,0 +1,65 @@
+{
+  "id": "00000000-9999-aaaa-0000-2ea08a01e903",
+  "role": "PRIMARY",
+  "status": "PENDING",
+  "firstName": "John",
+  "middleName": "MF",
+  "lastName": "McClane",
+  "address": "1381 Atlantic Ave, Brooklyn",
+  "city": "New York",
+  "state": "NY",
+  "zipCode": "NY11216",
+  "phoneNumber": "+1718-953-8465",
+  "ssn": "111-22-3333",
+  "email": "john.mf.mcclane@wearesingular.com",
+  "employer": "New York Police Dep.",
+  "dateOfBirth": "1955-05-22",
+  "emailVerified": false,
+  "emailVerifiedAt": null,
+  "idProofDocument": {
+    "type": "USDL",
+    "number": "1231231230",
+    "expirationDate": "2030-11-22",
+    "issuedDate": "2000-11-22",
+    "issuer": "WY",
+    "frontIdProof": {
+      "default": "http://localhost:8080/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOm51bGwsInNjb3BlcyI6WyJkb2N1bWVudHMiXSwicmVzb3VyY2VzIjpbImRvY3VtZW50cyNhNzRmOTA5Mi01ODg5LTQzMGEtOWMxOS02NzEyZjlmNjgwOTAiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwic3ViIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3YxL3VzZXJzL251bGwiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjkwMCwiaWF0IjowfQ.CVTmvkWe2rfCLYAmbSv4cUa4Cy2VmR_-3kerG9wia1gEwmVGawaujdNfqQ7OhUYrYffl6c1nfXQuWINX17zlKQ"
+    },
+    "backIdProof": {
+      "default": "http://localhost:8080/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOm51bGwsInNjb3BlcyI6WyJkb2N1bWVudHMiXSwicmVzb3VyY2VzIjpbImRvY3VtZW50cyNhNzRmOTA5Mi01ODg5LTQzMGEtOWMxOS02NzEyZjlmNjgwOTAiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwic3ViIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3YxL3VzZXJzL251bGwiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjkwMCwiaWF0IjowfQ.CVTmvkWe2rfCLYAmbSv4cUa4Cy2VmR_-3kerG9wia1gEwmVGawaujdNfqQ7OhUYrYffl6c1nfXQuWINX17zlKQ"
+    }
+  },
+  "selfie": {
+    "default": "http://localhost:8080/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOm51bGwsInNjb3BlcyI6WyJkb2N1bWVudHMiXSwicmVzb3VyY2VzIjpbImRvY3VtZW50cyNhNzRmOTA5Mi01ODg5LTQzMGEtOWMxOS02NzEyZjlmNjgwOTAiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwic3ViIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3YxL3VzZXJzL251bGwiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjkwMCwiaWF0IjowfQ.CVTmvkWe2rfCLYAmbSv4cUa4Cy2VmR_-3kerG9wia1gEwmVGawaujdNfqQ7OhUYrYffl6c1nfXQuWINX17zlKQ"
+  },
+  "consent": true,
+  "consentAccountOpening": true,
+  "consentPrivacyPolicy": true,
+  "consentCommunication": false,
+  "checkSanction": null,
+  "sanctionVerifiedAt": null,
+  "checkPoliticalExposure": null,
+  "politicalExposureVerifiedAt": null,
+  "checkAdverseMedia": null,
+  "adverseMediaVerifiedAt": null,
+  "checkAntiMoneyLaundering": null,
+  "antiMoneyLaunderingVerifiedAt": null,
+  "contractDocumentSignerStatus": null,
+  "contractDocumentSignerStatusUpdatedAt": null,
+  "invitedAt": "2021-04-08T18:52:21.425Z",
+  "verificationStatus": {
+    "faceStatus": "PENDING",
+    "faceUpdatedAt": "2021-04-08T18:52:21.425Z",
+    "documentStatus": "PENDING",
+    "documentUpdatedAt": "2021-04-08T18:52:21.425Z",
+    "addressStatus": "PENDING",
+    "addressUpdatedAt": "2021-04-08T18:52:21.425Z",
+    "sanctionsStatus": "PENDING",
+    "sanctionsUpdatedAt": "2021-04-08T18:52:21.425Z",
+    "mediaStatus": "PENDING",
+    "mediaUpdatedAt": "2021-04-08T18:52:21.425Z",
+    "politicalExposure": "PENDING",
+    "politicalExposureUpdatedAt": "2021-04-08T18:52:21.425Z"
+  },
+  "remoteMetadata": {}
+}

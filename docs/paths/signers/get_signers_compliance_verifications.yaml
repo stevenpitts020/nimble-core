@@ -1,0 +1,27 @@
+/signers/{id}/compliance-verifications:
+  get:
+    tags:
+      - Signer
+    summary: Get Signer compliance verification by Id
+    description: fetch signer compliance verification by Signer Id
+    parameters:
+      - in: path
+        name: id
+        description: uuid signer id
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+    security:
+      - bearer: []
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/SignerComplianceVerification'
+      '400':
+        $ref: '#/components/responses/BadRequest'

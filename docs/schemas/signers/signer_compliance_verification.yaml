@@ -1,0 +1,50 @@
+SignerComplianceVerification:
+  type: object
+  properties:
+    id:
+      type: string
+      format: uuidv4
+      title: uuid
+      readOnly: true
+      description: Search Compliance identifier
+      example: 2552ab85-08da-4bb5-be00-9e94d282d311
+    status:
+      title: The status of this compliance query
+      type: string
+    report:
+      title: Report
+      $ref: '#/components/schemas/Contract'
+      readOnly: true
+      description: A object that contains the report information
+    searchObject:
+      title: The search payload used on this compliance query
+      description: This contains a json payload used to perform this search on the external service
+      type: object
+      properties:
+        search_term:
+          type: string
+        limit:
+          type: number
+    reference:
+      title: The external service search reference for this query
+      description: This could be the search ID or REF given by the external service to retrieve a search.
+      type: string
+      example: 1495711341-Tu51KL9s
+    createdAt:
+      title: When was the query created
+      type: string
+      format: date-time
+    updatedAt:
+      title: When was the result last updated
+      type: string
+      format: date-time
+    signerId:
+      type: string
+      format: uuidv4
+      title: Signer Id
+      description: The signer id associated with this compliance search
+    results:
+      title: A list of matches
+      type: array
+      items:
+        $ref: '#/components/schemas/SignerComplianceVerificationItem'

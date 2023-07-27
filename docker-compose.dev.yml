@@ -1,0 +1,30 @@
+version: '2.1'
+
+services:
+  postgres:
+    image: postgres:11-alpine
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=nimble-core-db
+      - POSTGRES_USER=nimble-core-user
+      - POSTGRES_PASSWORD=nimble-core-pass
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready --username=nimble-core-user --dbname=nimble-core-db" ]
+      interval: 10s
+      timeout: 30s
+      retries: 3
+
+  localstack:
+    image: localstack/localstack:0.12.6
+    ports:
+      - 4566:4566
+      - 4571:4571
+      - 8055:8080
+    environment:
+      - SERVICES=s3,ses,sqs,sns
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - DEFAULT_REGION=us-east-1
+    volumes:
+      - "${TMPDIR:-/tmp/localstack}:/tmp/localstack"

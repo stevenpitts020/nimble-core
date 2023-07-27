@@ -1,0 +1,12 @@
+{
+  "id": "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
+  "signerId": "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
+  "errorCode": null,
+  "score": 800,
+  "reportDate": "2020-09-16T11:32:38.558Z",
+  "report": {
+    "uri": "http://localhost:8080/v1/documents/00000000-0000-0000-0000-000000000000?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOm51bGwsInNjb3BlcyI6WyJkb2N1bWVudHMiXSwicmVzb3VyY2VzIjpbImRvY3VtZW50cyMwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwic3ViIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3YxL3VzZXJzL251bGwiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjkwMCwiaWF0IjowfQ.00zPFWcCZhM9cNFwrANUaaMPSrwwFl_tnki7iZgU0YmD9UtVN9_h7mMLONeXfp_7QWIM8ymAabqsXrKNI0YJMw"
+  },
+  "createdAt": "2020-09-16T11:32:38.558Z",
+  "updatedAt": "2020-09-16T11:32:38.558Z"
+}

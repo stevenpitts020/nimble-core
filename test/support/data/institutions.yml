@@ -1,0 +1,59 @@
+- id: '2552ab85-08da-4bb5-be00-9e94d282d311'
+  name: Singular
+  slug: singular
+  domain: wearesingular.com
+  logo_uri: https://wearesingular.com/img/example.png
+  background_image_uri: https://wearesingular.com/img/example.png
+  email: 'test@wearesingular.com'
+  routing_number: 111222333
+  template_approve: 'this is the approval email: {accountNumber}, {amount}, {routingNumber}, {bankName}, {name}, {product}, {employee}'
+  template_decline: 'this is the decline email: {bankName}, {name}, {product}, {employee}'
+  created_at: 2018-05-13T12:32:03.341Z
+  updated_at: 2018-05-13T12:32:03.341Z
+  public_metadata:
+    bsa:
+      _:
+        thresholds:
+          - op: '>='
+            val: 7
+            risk: High
+          - op: '>='
+            val: 5
+            risk: Moderate
+          - risk: Low
+      usCitizen:
+        order: 0
+        text: Are all account owners US citizens?
+        type: string
+        subtype: enum
+        enum: [ 'yes', 'no' ]
+        score:
+          no: 2
+        required: 'true'
+        default: ''
+
+- id: '2552ab85-08da-4bb5-be00-9e94d282d312'
+  name: Bank
+  slug: bnk
+  domain: testbank.wearesingular.com
+  logo_uri: https://wearesingular.com/img/example.png
+  background_image_uri: https://wearesingular.com/img/example.png
+  email: 'test@wearesingular.com'
+  routing_number: 555666777
+  template_approve: 'this is the approval email: {accountNumber}, {amount}, {routingNumber}, {bankName}, {name}, {product}, {employee}'
+  template_decline: 'this is the decline email: {bankName}, {name}, {product}, {employee}'
+  created_at: 2018-05-13T12:32:03.341Z
+  updated_at: 2018-05-13T12:32:03.341Z
+
+- id: '11000000-0000-0000-0000-000000005555'
+  name: QueueBank
+  slug: queuebnk
+  domain: queuebnktestbank.wearesingular.com
+  logo_uri: https://wearesingular.com/img/example.png
+  background_image_uri: https://wearesingular.com/img/example.png
+  email: 'test.queuebnk@wearesingular.com'
+  routing_number: 555666777
+  template_approve: 'this is the approval email: {accountNumber}, {amount}, {routingNumber}, {bankName}, {name}, {product}, {employee}'
+  template_decline: 'this is the decline email: {bankName}, {name}, {product}, {employee}'
+  created_at: 2018-05-13T12:32:03.341Z
+  updated_at: 2018-05-13T12:32:03.341Z

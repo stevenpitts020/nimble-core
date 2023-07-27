@@ -1,0 +1,58 @@
+<?xml-model href="metadata.xsd"?>
+<event name="account_request_approved" rid="10203040-1010-1010-1010-050607080900" timestamp="1970-01-01T00:01:00">
+  <accountRequest updatedAt="2019-03-17T12:03:34" updatedBy="userfromotherbankforqueues@nimblefi.com" branchCode="b050">
+    <id>da31cf6d-f10c-43a1-a67e-e80ad124c223</id>
+    <documents signedAt="2019-03-17T13:03:34">
+      <document name="someFileName" location="/requests/10203040-1010-1010-1010-050607080900/EXPRT000.someFileName.pdf"/>
+      <document name="anotherFileName" location="/requests/10203040-1010-1010-1010-050607080900/EXPRT000.anotherFileName.pdf"/>
+      <document name="thirdFileName" location="/requests/10203040-1010-1010-1010-050607080900/EXPRT000.thirdFileName.pdf"/>
+    </documents>
+    <bsa>
+      <score>0</score>
+      <questions>
+        <question id="usCitizen" text="Are all account owners US citizens?">No</question>
+        <question id="countryOfOrigin" text="What is your country of origin?">Mexico</question>
+        <question id="hearAbout" text="How did you hear about Central Bank?">fox news</question>
+      </questions>
+    </bsa>
+    <signers>
+      <signer>
+        <id>cc44aa1f-0000-0000-0000-000000000001</id>
+        <dateOfBirth>1955-06-30</dateOfBirth>
+        <email>example+export@nimblefi.com</email>
+        <firstName>George</firstName>
+        <middleName/>
+        <lastName>Constanza</lastName>
+        <phoneNumber/>
+        <ssn/>
+        <role>PRIMARY</role>
+        <employer>Singular</employer>
+        <address>
+          <street/>
+          <city/>
+          <state/>
+          <zipCode/>
+        </address>
+        <proof documentType="PASSPORT">
+          <passport>
+            <number>123123123</number>
+            <expirationDate>2022-02-16</expirationDate>
+            <issuedDate>2000-02-16</issuedDate>
+            <issuer>USA</issuer>
+            <documents>
+              <document name="passport" location="/requests/10203040-1010-1010-1010-050607080900/0ca05e4f-e97f-41e5-83f9-2d4bd0b98ff3.png"/>
+              <document name="creditReport" location="/requests/10203040-1010-1010-1010-050607080900/2e31d8c0-1226-4651-8a5d-4bd8aa454724.pdf"/>
+              <document name="complianceReport" location="/requests/10203040-1010-1010-1010-050607080900/2e31d8c0-1226-4651-8a5d-4bd8aa454725.pdf"/>
+            </documents>
+          </passport>
+        </proof>
+      </signer>
+    </signers>
+    <productConfigurations>
+      <productConfiguration product_sku="EXPRT000">
+        <productOption category="product_config" key="initial_deposit" value="12000"/>
+        <productOption category="product_config" key="account_number" value="003"/>
+      </productConfiguration>
+    </productConfigurations>
+  </accountRequest>
+</event>

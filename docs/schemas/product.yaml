@@ -1,0 +1,56 @@
+Product:
+  type: object
+  required:
+    - id
+    - name
+    - category
+    - summary
+    - content
+  properties:
+    id:
+      type: string
+      format: uuidv4
+      title: Id
+      description: The unique identifier of the product
+      readOnly: true
+      example: 7fcf53da-6b67-4fa5-aa7e-4328f24f8ade
+    name:
+      type: string
+      title: Name
+      description: The name of the product
+      example: Simple Checking
+    category:
+      type: string
+      title: Category
+      description: The category of the product
+      enum: ['CHECKING', 'SAVINGS', 'CD']
+      example: CHECKING
+    options:
+      type: array
+      title: Options
+      readOnly: true
+      items:
+        $ref: '#/components/schemas/ProductOption'
+    summary:
+      type: string
+      title: Summary
+      description: The summary of the product
+      example: Simple checking means no fees with online statements and it means no minimum balance required to maintain the account, access to online banking, bill pay and more. You get the benefits you want.
+    content:
+      readOnly: true
+      type: string
+      title: Content
+      description: The product information as HTML
+      example: '<p>Simple checking means no fees with online statements and it means no minimum balance required to maintain the account, access to online banking, bill pay and more. You get the benefits you want.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+    contentRaw:
+      writeOnly: true
+      type: string
+      title: Content RAW
+      description: The product information as markdown
+      example: "Simple checking means **no fees** with online statements and it means no minimum balance required to maintain the account, access to online banking, bill pay and more. You get the benefits you want.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    createdAt:
+      type: string
+      format: date-time
+      title: Creation Date
+      description: The date and time the record entered the system
+      readOnly: true

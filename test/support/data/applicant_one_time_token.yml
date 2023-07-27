@@ -1,0 +1,7 @@
+- id: '2345f171-b3b7-4167-abfb-ff9203514bde'
+  phone: '5856878184'
+  hashed_verification_token: '$2b$10$Fu2IT0PF5PfUG71TCvP/IeIctmXZM4qwHPtq2RSkstrfvJoIbSVVy'
+  salt: '$2b$10$Fu2IT0PF5PfUG71TCvP/Ie'
+  expiration: 1767838416
+  is_already_used: false
+

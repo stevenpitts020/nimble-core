@@ -1,0 +1,55 @@
+ProductOption:
+  type: object
+  properties:
+    id:
+      type: string
+      format: uuidv4
+      title: Product Option
+      description: The unique identifier of the product option
+      readOnly: true
+      example: 95554751-51d1-4f37-9785-417ae5251d56
+    key:
+      type: string
+      description: the property key
+      example: loan_max_value
+    title:
+      type: string
+      title: Name
+      description: The human readable title for the property
+      example: Loan Max Value
+    category:
+      type: string
+      title: Name
+      description: A string used to group multiple options
+      example: category
+    value:
+      title: Value
+      description: The string, integer or boolean value for this property
+      nullable: true
+      example: Example
+      oneOf:
+        - type: string
+        - type: integer
+        - type: boolean
+    lead:
+      type: string
+      title: Lead
+      description: A string used to add additional information
+      readOnly: true
+      nullable: true
+      example: Used for standard loans, credit cards, and line-of-credit accounts
+    annotation:
+      type: string
+      title: Annotation
+      description: A string used to add annotations
+      readOnly: true
+      nullable: true
+      example: Free
+    parentId:
+      type: string
+      format: uuidv4
+      title: Parent Product Option
+      description: The unique identifier of the product option parent
+      readOnly: true
+      nullable: true
+      example: 2552ab85-08da-4bb5-be00-9e94d282d311

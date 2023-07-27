@@ -1,0 +1,51 @@
+{
+  "id": "3552ab85-08da-4bb5-be00-9e94d282d340",
+  "name": "Simple Checking",
+  "sku": "PRD-002",
+  "category": "CHECKING",
+  "options": [
+    {
+      "id": "3552ab85-0000-0000-0000-9e94d282d310",
+      "key": "option_0",
+      "title": "some example value",
+      "category": "example_options",
+      "value": "0",
+      "lead": null,
+      "annotation": null,
+      "parentId": null
+    },
+    {
+      "id": "3552ab85-0000-0000-0000-9e94d282d311",
+      "key": "option_1",
+      "title": "another value",
+      "category": "example_options",
+      "value": "1",
+      "lead": null,
+      "annotation": null,
+      "parentId": null
+    },
+    {
+      "id": "3552ab85-0000-0000-0000-9e94d282d312",
+      "key": "single",
+      "title": "I am alone!",
+      "category": "single_option",
+      "value": "3",
+      "lead": null,
+      "annotation": null,
+      "parentId": null
+    },
+    {
+      "id": "7b9c52a2-c542-4031-8342-5fa29a2f6d0d",
+      "key": "single_double",
+      "title": "some double example value",
+      "category": "single_option",
+      "value": "0",
+      "lead": "Some lead",
+      "annotation": "Some annotation",
+      "parentId": "3552ab85-0000-0000-0000-9e94d282d312"
+    }
+  ],
+  "summary": "Simple checking means no fees with online statements and it means no minimum balance required to maintain the account, access to online banking, bill pay and more. You get the benefits you want.",
+  "content": "<p>Simple checking <strong>lorem ipsum</strong> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n",
+  "createdAt": "2020-03-06T12:32:03.341Z"
+}

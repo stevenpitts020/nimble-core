@@ -1,0 +1,48 @@
+/account-requests/{id}:
+  put:
+    tags:
+      - Account Request
+    summary: Update Account Request
+    description: will update an account request. the account request status can only be updated if the current status is PENDING.
+    operationId: putAccountRequests
+    parameters:
+      - name: id
+        in: path
+        description: Account request ID
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+      - in: body
+        name: body
+        description: Account Request object
+        required: true
+        schema:
+          allOf:
+            - $ref: '#/components/schemas/AccountRequest'
+            - type: object
+              properties:
+                status:
+                  readOnly: false
+                  enum: ['INCOMPLETE', 'DECLINED', 'APPROVED']
+    security:
+      - bearer: ['account_requests']
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountRequest'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'
+      '403':
+        $ref: '#/components/responses/Forbidden'
+      '404':
+        $ref: '#/components/responses/NotFound'
+      '412':
+        description: Account Request Must be "PENDING" for it state to be changed
+        schema:
+          $ref: '#/components/responses/PreCondition'

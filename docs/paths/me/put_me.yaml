@@ -1,0 +1,46 @@
+/me:
+  put:
+    tags:
+      - Me
+    summary: Update the current user
+    description: >-
+      Method to update the current user.
+      Will receive an object with the fields to update and respond with the updated user object.
+    operationId: updateMe
+    parameters:
+      - in: body
+        name: Password
+        description: Password to be updated. (optional)
+        required: true
+        schema:
+          properties:
+            password:
+              writeOnly: true
+              type: string
+              title: Password
+              minLength: 6
+              maxLength: 160
+              description: writeOnly value for the user current user password
+      - in: body
+        name: User Data
+        description: User object to be updated
+        required: true
+        schema:
+          $ref: '#/components/schemas/Me'
+    security:
+      - bearer: []
+    responses:
+      '200':
+        description: OK
+        schema:
+          $ref: '#/components/schemas/Me'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'
+      '404':
+        $ref: '#/components/responses/NotFound'
+      '409':
+        description: A user with that email already exists
+        schema:
+          $ref: '#/components/responses/Conflict'

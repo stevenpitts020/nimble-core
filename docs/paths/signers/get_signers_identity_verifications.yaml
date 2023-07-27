@@ -1,0 +1,27 @@
+/signers/{id}/identity-verifications:
+  get:
+    tags:
+      - Signer
+    summary: Get Signer identity verifications by Id
+    description: fetch signer identity verifications by Id
+    parameters:
+      - in: path
+        name: id
+        description: uuid signer id
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+    security:
+      - bearer: []
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/SignerIdentityVerification'
+      '400':
+        $ref: '#/components/responses/BadRequest'

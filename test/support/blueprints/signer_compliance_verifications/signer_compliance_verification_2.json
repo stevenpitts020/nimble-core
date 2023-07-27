@@ -1,0 +1,69 @@
+{
+  "id": "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
+  "status": "200",
+  "searchObject": { "search_term": "George Constanza" },
+  "reference": "a74f9092-5889-COMPLY",
+  "signerId": "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
+  "results": [
+    {
+      "id": "1e31d8c0-1226-4651-8a5d-4bd8aa454721",
+      "fullName": "George Something Contanza",
+      "nameAka": ["Georgie", "Dofus", "Constanza"],
+      "dateOfBirth": "1982-09-16",
+      "dateOfDeath": "2020-09-16",
+      "countries": ["Portugal", "United States", "United Kingdom"],
+      "associates": ["Seinfeld", "Elaine"],
+      "matchTypes": ["name_exact", "aka_exact"],
+      "adverseMedia": [
+        {
+          "id": "20000000-0000-accc-0000-00bbbbbbb221",
+          "name": "Some strange news",
+          "date": "2008-12-06T00:00:00.000Z",
+          "deletedDate": null,
+          "url": "https://github.com/typescript-cheatsheets/react",
+          "type": "ADVERSE-MEDIA",
+          "source": "complyadvantage",
+          "subtype": "adverse-media",
+          "value": "Chairperson Of The African Union",
+          "createdAt": "2020-09-16T11:35:11.734Z",
+          "updatedAt": "2020-09-16T11:35:11.734Z",
+          "countryCodes": ["UK"]
+        }
+      ],
+      "warnings": [
+        {
+          "id": "20000000-0000-accc-0000-00bbbbbbb222",
+          "name": "This is some serious warning",
+          "date": "2020-12-06T00:00:00.000Z",
+          "deletedDate": null,
+          "url": "https://github.com",
+          "type": "WARNING",
+          "source": "complyadvantage",
+          "subtype": "pep-1",
+          "value": "Chairperson Of The African Union",
+          "createdAt": "2020-09-16T11:35:11.734Z",
+          "updatedAt": "2020-09-16T11:35:11.734Z",
+          "countryCodes": ["UK"]
+        },
+        {
+          "id": "20000000-0000-accc-0000-00bbbbbbb223",
+          "name": "This was one day a warning",
+          "date": "2019-01-01T00:00:00.000Z",
+          "deletedDate": "2020-01-01T00:00:00.000Z",
+          "url": "https://github.com",
+          "type": "WARNING",
+          "source": "complyadvantage",
+          "subtype": "pep-1, warning, some-type",
+          "value": "Something fishy",
+          "createdAt": "2020-09-16T11:35:11.734Z",
+          "updatedAt": "2020-09-16T11:35:11.734Z",
+          "countryCodes": ["PT"]
+        }
+      ],
+      "sanctions": [],
+      "politicalExposure": []
+    }
+  ],
+  "createdAt": "2020-09-16T11:32:38.558Z",
+  "updatedAt": "2020-09-16T11:32:38.558Z"
+}

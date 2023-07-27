@@ -1,0 +1,38 @@
+- id: 'FF000000-0000-0000-1111-4bd8aa454721' # valid request
+  signer_id: '2e31d8c0-1226-4651-8a5d-4bd8aa454721'
+  created_at: 2018-01-01T00:00:00.000Z
+  expires_at: 2200-01-01T00:00:00.000Z
+  consumed_at: null
+- id: 'FF000000-0000-0000-2222-4bd8aa454721' # expired request
+  signer_id: '2e31d8c0-1226-4651-8a5d-4bd8aa454721'
+  created_at: 2018-01-01T00:00:00.000Z
+  expires_at: 2018-01-01T00:00:10.000Z
+  consumed_at: null
+- id: 'FF000000-0000-0000-3333-4bd8aa454721' # consumend request
+  signer_id: '2e31d8c0-1226-4651-8a5d-4bd8aa454721'
+  created_at: 2018-01-01T00:00:00.000Z
+  expires_at: 2200-01-01T00:00:00.000Z
+  consumed_at: 2018-01-01T10:00:00.000Z
+
+# used for cron tests
+- id: 'FF000000-0000-0000-1111-1ea08a01e801' # valid request
+  signer_id: 'ffffffff-0000-473e-a5cb-1ea08a01e801'
+  created_at: 2019-01-01T01:00:00.001Z
+  expires_at: 2020-01-01T01:00:00.001Z
+  consumed_at: null
+- id: 'FF000000-0000-0000-2222-1ea08a01e901' # valid request
+  signer_id: 'ffffffff-0000-473e-a5cb-1ea08a01e901'
+  created_at: 2019-01-01T01:00:00.001Z
+  expires_at: 2020-01-01T01:00:00.001Z
+  consumed_at: null
+# repeated
+- id: 'FF000000-0000-0000-3333-1ea08a01e901' # valid request
+  signer_id: 'ffffffff-0000-473e-a5cb-1ea08a01e901'
+  created_at: 2019-01-01T01:00:10.001Z
+  expires_at: 2020-01-01T01:00:00.001Z
+  consumed_at: null
+- id: 'FF000000-0000-0000-4444-1ea08a01e901' # valid request
+  signer_id: 'ffffffff-0000-473e-a5cb-1ea08a01e901'
+  created_at: 2019-01-01T01:00:20.001Z
+  expires_at: 2020-01-01T01:00:00.001Z
+  consumed_at: null

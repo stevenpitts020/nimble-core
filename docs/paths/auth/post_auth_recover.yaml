@@ -1,0 +1,21 @@
+/auth/recover/{email}:
+  post:
+    tags:
+      - Auth
+    description: Requests an account recovery code via email
+    operationId: authRecover
+    parameters:
+      - name: email
+        in: path
+        description: The email the user used to register
+        required: true
+        schema:
+          type: string
+          format: email
+    responses:
+      '204':
+        description: OK
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '404':
+        description: Could not find an user with that email.

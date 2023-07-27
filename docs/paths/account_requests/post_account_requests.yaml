@@ -1,0 +1,31 @@
+/account-requests:
+  post:
+    tags:
+      - Account Request
+    summary: Create Account Request
+    description: will create an account request.
+    operationId: postAccountRequests
+    parameters:
+      - in: body
+        name: body
+        description: Account Request object
+        required: true
+        schema:
+          allOf:
+            - $ref: '#/components/schemas/AccountRequest'
+            - type: object
+              required:
+                - institutionId
+    responses:
+      '201':
+        description: Created
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountRequest'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '404':
+        $ref: '#/components/responses/NotFound'
+      '500':
+        $ref: '#/components/responses/InternalError'

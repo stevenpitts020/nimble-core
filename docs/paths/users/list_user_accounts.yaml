@@ -1,0 +1,45 @@
+/user-accounts:
+  get:
+    tags:
+      - User
+    summary: Get a list of all user accounts
+    description: Method to get a paginated list of all user accounts
+    operationId: getUserAccounts
+    security:
+      - ApiKeyAuth: []
+    parameters:
+      - in: query
+        name: sort
+        required: false
+        description: Sort users by user property
+        schema:
+          type: string
+          enum:
+            - -id
+          default: -id
+      - in: query
+        name: search
+        required: false
+        description: Search users by first and last name
+        schema:
+          type: string
+      - in: query
+        name: branch
+        required: false
+        description: Filter users by a specific branch
+        schema:
+          type: string
+          format: uuid
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/User'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'

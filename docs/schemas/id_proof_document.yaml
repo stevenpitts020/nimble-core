@@ -1,0 +1,63 @@
+IdProofDocument:
+  type: object
+  required:
+    - type
+    - number
+    - expirationDate
+    - issuedDate
+    - issuer
+    - frontDocumentId
+    - backDocumentId
+  properties:
+    type:
+      type: string
+      title: Document Type
+      description: Id Proof Document Type
+      enum: ['USDL', 'PASSPORT']
+      example: USDL
+    number:
+      type: string
+      title: Document Number
+      description: Id Proof Document Number
+      maxLength: 100
+      example: 123535000ZW2
+    expirationDate:
+      type: string
+      format: date
+      title: Expiration Date
+      description: Id Proof Document Expiration Date
+    issuedDate:
+      type: string
+      format: date
+      title: Issued Date
+      description: Id Proof Document Issued Date
+    issuer:
+      type: string
+      title: Id Proof Document Issuer
+      description: Id Proof Document Issuer. Depends on Document Type, if Document Type is PASSPORT the Issuer need's to be a Coutry, if is USDL it need's to be a USA State.
+      example: 'CA'
+      oneOf:
+        - $ref: '#/components/schemas/Countries'
+        - $ref: '#/components/schemas/StatesUSA'
+    frontDocumentId:
+      writeOnly: true
+      type: string
+      format: uuidv4
+      title: Front Document Id
+      description: Document id associated with front of the id proof document
+      example: a74f9092-5889-430a-9c19-6712f9f68090
+    backDocumentId:
+      writeOnly: true
+      type: string
+      format: uuidv4
+      title: Back Document Id
+      description: Document id associated with back of the id proof document
+      example: a74f9092-5889-430a-9c19-6712f9f68091
+    frontDocument:
+      allOf:
+        - $ref: '#/components/schemas/Image'
+        - readOnly: true
+    backDocument:
+      allOf:
+        - $ref: '#/components/schemas/Image'
+        - readOnly: true

@@ -1,0 +1,33 @@
+AccountRequestVerificationStatus:
+  type: object
+  properties:
+    faceStatus:
+      title: The status of the face verification
+      type: string
+      enum: ['VALID', 'INVALID', 'PENDING']
+      default: 'PENDING'
+    documentStatus:
+      title: The status of the document verification
+      type: string
+      enum: ['VALID', 'INVALID', 'PENDING']
+      default: 'PENDING'
+    addressStatus:
+      title: The status of the address verification
+      type: string
+      enum: ['VALID', 'INVALID', 'PENDING']
+      default: 'PENDING'
+    sanctionsStatus:
+      title: The status of the sanctions verification
+      type: string
+      enum: ['MATCH', 'NOMATCH', 'PENDING']
+      default: 'PENDING'
+    mediaStatus:
+      title: The status of the adverse media verification
+      type: string
+      enum: ['MATCH', 'NOMATCH', 'PENDING']
+      default: 'PENDING'
+    politicalExposureStatus:
+      title: The status of the political exposure verification
+      type: string
+      enum: ['MATCH', 'NOMATCH', 'PENDING']
+      default: 'PENDING'

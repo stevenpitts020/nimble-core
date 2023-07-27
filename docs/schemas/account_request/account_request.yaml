@@ -1,0 +1,119 @@
+AccountRequest:
+  type: object
+  properties:
+    id:
+      type: string
+      format: uuidv4
+      title: Account request unique id
+      readOnly: true
+      description: Account request unique identifier
+      example: 2552ab85-08da-4bb5-be00-9e94d282d348
+    institutionId:
+      type: string
+      format: uuidv4
+      title: Institution
+      description: The unique identifier of the Institution
+      writeOnly: true
+      example: 2552ab85-08da-4bb5-be00-9e94d282d311
+    status:
+      type: string
+      title: Status
+      readOnly: true
+      enum: ['DRAFT', 'INCOMPLETE', 'PENDING', 'SIGNED', 'DECLINED', 'APPROVED']
+      description: >-
+        The status of the account request:
+
+          - Draft: the account request is still being created, some signers are still being invited
+          - Incomplete: the account request is not fulfilled, some invitees did not fulfilled their information yet.
+          - Pending: the account request is pending, all signers have their information fulfilled but the agreement is not signed yet;
+          - Signed: all signers have signed the agreement;
+          - Declined: the account request was declined;
+          - Approved: the account request was approved.
+      example: APPROVED
+    bsa:
+      type: object
+      readOnly: true
+      properties:
+        risk:
+          type: string
+          title: BSA Risk evaluation, null if not evaluated
+          enum: ['High', 'Moderate', 'Low', null]
+          example: Low
+        score:
+          type: number
+          title: BSA Score
+          example: 2
+    signers:
+      readOnly: true
+      type: array
+      items:
+        $ref: '#/components/schemas/Signer'
+        minItems: 1
+      title: Signers
+      description: A list of signers attached to this account request
+    productConfigurations:
+      type: array
+      items:
+        $ref: '#/components/schemas/ProductConfiguration'
+        minItems: 1
+        maxItems: 1
+      title: Products Configuration
+      description: A list of products selected for this account request with respective configurations
+    contractDocumentEnvelopeStatus:
+      type: string
+      readOnly: true
+      title: Status
+      enum: ['CREATED', 'SENT', 'DELIVERED', 'SIGNED', 'COMPLETED', 'DECLINED', 'VOIDED']
+      description: The status of the contract document
+      example: COMPLETED
+    contractDocumentCreatedAt:
+      type: string
+      readOnly: true
+      format: date-time
+      title: Creation Date
+      description: The date when the contract document was first created
+    contractDocumentEnvelopeStatusUpdatedAt:
+      type: string
+      readOnly: true
+      format: date-time
+      title: Creation Date
+      description: The date when the contract document status was last updated
+    contract:
+      allOf:
+        - $ref: '#/components/schemas/Contract'
+        - title: Contract
+        - readOnly: true
+        - description: A object that contains contract information
+    verificationStatus:
+      allOf:
+        - $ref: '#/components/schemas/AccountRequestVerificationStatus'
+        - readOnly: true
+    branchId:
+      writeOnly: true
+      type: string
+      format: uuidv4
+      title: Institution branch unique id
+      description: Institution branch unique identifier
+      example: a74f9092-5889-430a-9c19-6712f9f68090
+    branch:
+      allOf:
+        - $ref: '#/components/schemas/InstitutionBranch'
+        - readOnly: true
+    statusUpdatedBy:
+      allOf:
+        - $ref: '#/components/schemas/User'
+        - title: User
+        - readOnly: true
+        - description: A object that contains the user information that performed status update
+    statusUpdatedAt:
+      type: string
+      format: date-time
+      title: Status Update Date
+      description: The date and time the account record status changed from pending to either APPROVED or DENIED
+      readOnly: true
+    createdAt:
+      type: string
+      format: date-time
+      title: Creation Date
+      description: The date and time the account record entered the system
+      readOnly: true

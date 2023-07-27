@@ -1,0 +1,52 @@
+Me:
+  type: object
+  required:
+    - id
+  properties:
+    id:
+      type: string
+      format: uuidv4
+      title: User unique identifier
+      readOnly: true
+      description: The machine unique identifier of the user
+      example: 1052ab85-08da-4bb5-be00-9e94d282d310
+    email:
+      type: string
+      title: Email
+      description: The email of the user
+      example: demouser@nimblefi.com
+    firstName:
+      type: string
+      title: First Name
+      description: The first name of the user
+      example: Sample
+    lastName:
+      type: string
+      title: Last Name
+      description: The last name of the user
+      example: Specimen
+    accounts:
+      type: array
+      items:
+        $ref: '#/components/schemas/Account'
+      title: Accounts
+      readOnly: true
+      description: A list of user accounts attached to this user
+    createdAt:
+      type: string
+      format: date-time
+      title: Creation Date
+      readOnly: true
+      description: The date and time the user record entered the system
+    institution:
+      readOnly: true
+      allOf:
+        - $ref: '#/components/schemas/Institution'
+    branchId:
+      type: string
+      format: uuidv4
+      title: Institution branch unique id
+      description: Institution branch unique identifier
+      example: a74f9092-5889-430a-9c19-6712f9f68090
+    branch:
+      $ref: '#/components/schemas/InstitutionBranch'

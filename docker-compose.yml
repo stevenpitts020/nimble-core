@@ -1,0 +1,37 @@
+version: '2.1'
+
+services:
+  db:
+    image: postgres:11-alpine
+    container_name: nimble-core-db.db
+    volumes:
+      - ./.pgdata/postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: nimble-core-pass
+      POSTGRES_USER: nimble-core-user
+      POSTGRES_DB: nimble-core-db
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready --username=nimble-core-user --dbname=nimble-core-db"]
+      interval: 10s
+      timeout: 30s
+      retries: 3
+  api:
+    build: .
+    image: nimble-core-.api
+    container_name: nimble-core-.api
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+    links:
+     - db
+    ports:
+      - "8080:8080"
+    command: npm run debug
+    environment:
+      JDBC_URL: postgres://nimble-core-user:nimble-core-pass@db:5432/nimble-core-db
+    depends_on:
+      db:
+        condition: service_healthy

@@ -1,0 +1,5 @@
+--recursive
+--require test/index.js
+test/**/*.test.js
+test/**/*.unit.js
+--file test/teardown.js

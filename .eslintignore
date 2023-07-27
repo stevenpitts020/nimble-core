@@ -1,0 +1,6 @@
+/coverage/**
+/docs/**
+/migrations/**
+/seeds/**
+/public/**
+

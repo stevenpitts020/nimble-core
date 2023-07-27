@@ -1,0 +1,22 @@
+BsaRiskResult:
+  type: object
+  required:
+    - answer
+    - position
+    - questionId
+  properties:
+    questionId:
+      type: string
+      title: Question Slug
+      description: The question identifier
+      example: 'all-account-owners'
+    answer:
+      type: string
+      title: Answer
+      description: The answer for this result
+      example: 'Yes'
+    position:
+      type: number
+      title: Position
+      description: The order in which this answer should be displayed
+      example: 1

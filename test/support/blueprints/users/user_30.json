@@ -1,0 +1,10 @@
+{
+  "id": "1052ab85-08da-4bb5-be00-9e94d282d330",
+  "firstName": "Alice",
+  "lastName": "Wonderland",
+  "createdAt": "2018-03-16T12:32:03.341Z",
+  "email": "aliceinwonderland@nimblefi.com",
+  "roles": ["employee"],
+  "status": "ACTIVE",
+  "_refLink": "http://localhost:3001/wearesingular.com/onboarding/?_rbid=1052ab85-08da-4bb5-be00-9e94d282d330"
+}

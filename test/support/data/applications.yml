@@ -1,0 +1,6 @@
+- id: '8a62b41f-1c59-4854-af50-cf0e60cc6d73'
+  applicant_id: '1052ab85-08da-4bb5-be00-9e94d282d310'
+  status: 'PENDING'
+  session: 'navigate applicant to current step'
+  created_at: 2022-10-16T12:32:03.341Z
+  updated_at: 2022-10-16T12:32:03.341Z

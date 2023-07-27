@@ -1,0 +1,28 @@
+/users/{id}:
+  get:
+    tags:
+      - User
+    summary: Get a user
+    description: Method to get a user
+    operationId: getUser
+    parameters:
+      - name: id
+        in: path
+        description: User ID
+        required: true
+        schema:
+          type: string
+          format: int64
+    security:
+      - ApiKeyAuth: []
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      '401':
+        $ref: '#/components/responses/Unauthorized'
+      '404':
+        $ref: '#/components/responses/NotFound'

@@ -1,0 +1,83 @@
+/signers/{id}/validate:
+  post:
+    tags:
+      - Signer
+    summary: Validate Signer
+    description: Validate Signer
+    parameters:
+      - in: path
+        name: id
+        description: uuid Signer Id
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+    security:
+      - bearer: []
+    requestBody:
+      description: Signer information
+      required: true
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/Signer'
+              - type: object
+                required:
+                  - accountRequestId
+              - properties:
+                  id:
+                    type: string
+                    writeOnly: true
+                    format: uuidv4
+                    title: the ID of the the signer to validate
+                    description: signer identifier
+                    example: dbe68ae4-7bea-4b2f-a889-da4458ca1452
+                  accountRequestId:
+                    type: string
+                    writeOnly: true
+                    format: uuidv4
+                    title: the ID of the account request this signer is assigned to
+                    description: account request identifier
+                    example: a74f9092-5889-430a-9c19-6712f9f68090
+    responses:
+      '200':
+        description: Validated
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'
+      '403':
+        $ref: '#/components/responses/Forbidden'
+      '409':
+        description: Duplicate values identified
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                <signerId>:
+                  type: object
+                  format: uuidv4
+                  title: the ID of the signer that has duplicated values
+                  properties:
+                    ssn:
+                      type: object
+                      required:
+                        - message
+                      properties:
+                        message:
+                          type: string
+                          description: Explanation of the duplicate value
+                    phoneNumber:
+                      type: object
+                      required:
+                        - message
+                      properties:
+                        message:
+                          type: string
+                          description: Explanation of the duplicate value
+      '412':
+        $ref: '#/components/responses/PreCondition'
+      '500':
+        $ref: '#/components/responses/InternalError'

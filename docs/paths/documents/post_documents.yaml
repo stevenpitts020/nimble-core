@@ -1,0 +1,23 @@
+/documents:
+  post:
+    tags:
+      - Document
+    summary: Create a document in the storage
+    description: Method to create a document in the storage
+    operationId: createDocument
+    requestBody:
+      description: Document object to upload
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Document'
+    responses:
+      '201':
+        description: Document object uploaded
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Document'
+      '400':
+        $ref: '#/components/responses/BadRequest'

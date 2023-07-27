@@ -1,0 +1,10 @@
+SignerContract:
+  type: object
+  required:
+    - url
+  properties:
+    url:
+      type: string
+      title: Url
+      description: An URL to forward the user to
+      example: https://demo.docusign.net/Signing/MTRedeem/v1/fe36d81e-1e10-48b9-ac55-d6962c2c02f6?slt=eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkI

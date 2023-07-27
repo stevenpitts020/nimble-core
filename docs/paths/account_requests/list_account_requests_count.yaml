@@ -1,0 +1,23 @@
+/account-requests/count:
+  get:
+    tags:
+      - Account Request
+    summary: Get the total amount of account requests
+    description: Method to get the total amount of account requests
+    operationId: countAccountRequests
+    security:
+      - bearer: []
+    parameters:
+      - in: query
+        name: status
+        required: false
+        description: filter account requests by status
+        schema:
+          type: string
+          enum: ['PENDING', 'DECLINED', 'APPROVED']
+          default: !!null
+    responses:
+      '200':
+        $ref: '#/components/responses/Count'
+      '401':
+        $ref: '#/components/responses/Unauthorized'

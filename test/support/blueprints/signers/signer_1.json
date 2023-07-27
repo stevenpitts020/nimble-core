@@ -1,0 +1,65 @@
+{
+  "id": "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
+  "status": "SIGNED",
+  "address": "123 main street apt. 1",
+  "city": "Lisbon",
+  "emailVerified": true,
+  "emailVerifiedAt": "2018-02-16T11:32:03.341Z",
+  "dateOfBirth": "1945-12-06",
+  "email": "example@nimblefi.com",
+  "firstName": "George",
+  "lastName": "Constanza",
+  "middleName": null,
+  "phoneNumber": "(233) 555-3333",
+  "role": "PRIMARY",
+  "ssn": "333-33-3333",
+  "state": "CA",
+  "zipCode": "22222",
+  "employer": "Singular",
+  "idProofDocument": {
+    "type": "USDL",
+    "number": "109409348",
+    "issuer": "FL",
+    "issuedDate": "2000-02-16",
+    "expirationDate": "2022-02-16",
+    "backIdProof": {
+      "default": "http://localhost:8080/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOm51bGwsInNjb3BlcyI6WyJkb2N1bWVudHMiXSwicmVzb3VyY2VzIjpbImRvY3VtZW50cyNhNzRmOTA5Mi01ODg5LTQzMGEtOWMxOS02NzEyZjlmNjgwOTAiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwic3ViIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3YxL3VzZXJzL251bGwiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjkwMCwiaWF0IjowfQ.CVTmvkWe2rfCLYAmbSv4cUa4Cy2VmR_-3kerG9wia1gEwmVGawaujdNfqQ7OhUYrYffl6c1nfXQuWINX17zlKQ"
+    },
+    "frontIdProof": {
+      "default": "http://localhost:8080/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOm51bGwsInNjb3BlcyI6WyJkb2N1bWVudHMiXSwicmVzb3VyY2VzIjpbImRvY3VtZW50cyNhNzRmOTA5Mi01ODg5LTQzMGEtOWMxOS02NzEyZjlmNjgwOTAiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwic3ViIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3YxL3VzZXJzL251bGwiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjkwMCwiaWF0IjowfQ.CVTmvkWe2rfCLYAmbSv4cUa4Cy2VmR_-3kerG9wia1gEwmVGawaujdNfqQ7OhUYrYffl6c1nfXQuWINX17zlKQ"
+    }
+  },
+  "consent": true,
+  "consentAccountOpening": true,
+  "consentPrivacyPolicy": true,
+  "consentCommunication": false,
+  "checkSanction": null,
+  "sanctionVerifiedAt": null,
+  "checkPoliticalExposure": null,
+  "politicalExposureVerifiedAt": null,
+  "checkAdverseMedia": null,
+  "adverseMediaVerifiedAt": null,
+  "checkAntiMoneyLaundering": null,
+  "antiMoneyLaunderingVerifiedAt": null,
+  "contractDocumentSignerStatus": "SIGNED",
+  "contractDocumentSignerStatusUpdatedAt": "2018-02-16T12:32:03.341Z",
+  "invitedAt": "2018-02-16T11:32:03.341Z",
+  "verificationStatus": {
+    "faceStatus": "VALID",
+    "faceUpdatedAt": "2018-03-16T11:32:03.341Z",
+    "documentStatus": "VALID",
+    "documentUpdatedAt": "2018-03-16T11:32:03.341Z",
+    "addressStatus": "INVALID",
+    "addressUpdatedAt": "2018-03-16T11:32:03.341Z",
+    "sanctionsStatus": "NOMATCH",
+    "sanctionsUpdatedAt": "2018-03-16T11:32:03.341Z",
+    "mediaStatus": "MATCH",
+    "mediaUpdatedAt": "2018-03-16T11:32:03.341Z",
+    "politicalExposure": "NOMATCH",
+    "politicalExposureUpdatedAt": "2018-03-16T11:32:03.341Z"
+  },
+  "selfie": {
+    "default": "http://localhost:8080/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOm51bGwsInNjb3BlcyI6WyJkb2N1bWVudHMiXSwicmVzb3VyY2VzIjpbImRvY3VtZW50cyNhNzRmOTA5Mi01ODg5LTQzMGEtOWMxOS02NzEyZjlmNjgwOTAiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwic3ViIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3YxL3VzZXJzL251bGwiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjkwMCwiaWF0IjowfQ.CVTmvkWe2rfCLYAmbSv4cUa4Cy2VmR_-3kerG9wia1gEwmVGawaujdNfqQ7OhUYrYffl6c1nfXQuWINX17zlKQ"
+  },
+  "remoteMetadata": {}
+}

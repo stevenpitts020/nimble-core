@@ -1,0 +1,42 @@
+/signers/{id}:
+  put:
+    tags:
+      - Signer
+    summary: Update Signer by Id
+    description: Update Signer by Id
+    parameters:
+      - in: path
+        name: id
+        description: uuid Signer Id
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+    security:
+      - bearer: ['signers']
+    requestBody:
+      description: Signer information
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Signer'
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Signer'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'
+      '403':
+        $ref: '#/components/responses/Forbidden'
+      '404':
+        $ref: '#/components/responses/NotFound'
+      '409':
+        $ref: '#/components/responses/Conflict'
+      '412':
+        $ref: '#/components/responses/PreCondition'

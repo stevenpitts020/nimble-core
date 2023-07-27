@@ -1,0 +1,68 @@
+Institution:
+  description: 'Institution'
+  type: object
+  required:
+    - id
+    - name
+    - domain
+    - slug
+    - logo
+    - backgroundImage
+  properties:
+    id:
+      type: string
+      format: uuidv4
+      title: Institution ID
+      description: The unique identifier of the Institution
+      readOnly: true
+      example: 9552ab85-08da-4bb5-be00-9e94d282d311
+    name:
+      type: string
+      title: Name
+      description: The institution name
+      example: Central Bank
+    slug:
+      type: string
+      title: Slug
+      description: The institution slug
+      example: central-bank
+    email:
+      type: string
+      title: Slug
+      description: The institution email to CC approvals
+      example: someone@central-bank.com
+    domain:
+      type: string
+      title: Domain
+      description: The institution domain
+    routingNumber:
+      type: string
+      title: routingNumber
+      description: The institution routing number
+    templateApprove:
+      type: string
+      title: templateApprove
+      description: Email Template for Approval notifications
+    templateDecline:
+      type: string
+      title: templateDecline
+      description: Email Template for Decline notifications
+      example: centralbank.com
+    logoUri:
+      $ref: '#/components/schemas/Image'
+    backgroundImageUri:
+      $ref: '#/components/schemas/Image'
+    logo:
+      type: string
+      format: byte
+      title: Institution logo image Base64 format
+      description: Document content in Base64 format
+      writeOnly: true
+      example: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg==
+    backgroundImage:
+      type: string
+      format: byte
+      title: Institution background image in Base64 format
+      description: Document content in Base64 format
+      writeOnly: true
+      example: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg==

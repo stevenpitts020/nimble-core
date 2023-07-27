@@ -1,0 +1,20 @@
+env:
+  node: true
+  mocha: true
+rules:
+  "node/no-unpublished-require": [2, {
+    allowModules: ["knex-cleaner", "supertest", "supertest-as-promised", "chai", "nock", "moment", "chai-as-promised", "sinon", "sinon-chai", "lodash-inflection"]
+  }]
+globals:
+  app: true
+  request: true
+  helpers: true
+  expect: true
+  should: true
+  seed: true
+  blueprints: true
+  moment: true
+  knex: true
+  _: true
+  sinon: true
+  nock: true

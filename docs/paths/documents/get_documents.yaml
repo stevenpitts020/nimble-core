@@ -1,0 +1,23 @@
+/documents/{id}:
+  get:
+    tags:
+      - Document
+    summary: Get a document from the storage
+    description: Method to get a document from storage
+    operationId: getDocument
+    parameters:
+      - name: id
+        in: path
+        description: The document id
+        required: true
+        schema:
+          type: string
+    security:
+      - token: ['documents']
+    responses:
+      '307':
+        description: Temporary redirect
+      '401':
+        $ref: '#/components/responses/Unauthorized'
+      '403':
+        $ref: '#/components/responses/Forbidden'

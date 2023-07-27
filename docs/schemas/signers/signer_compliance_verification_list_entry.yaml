@@ -1,0 +1,52 @@
+SignerComplianceVerificationListEntry:
+  type: object
+  properties:
+    id:
+      type: string
+      format: uuidv4
+      title: uuid
+      readOnly: true
+      description: Result Item Identifier
+      example: 2552ab85-08da-4bb5-be00-9e94d282d311
+    name:
+      title: A title for this entry
+      type: string
+    value:
+      title: The value associated with this entry
+      type: string
+      example: Political Position
+    source:
+      title: Source (e.g. OFAC SDN List) associated with this entry
+      type: string
+      example: complyadvantage
+    date:
+      title: A date for this entry
+      type: string
+      format: date
+    url:
+      title: A URL for this entry
+      type: string
+    type:
+      type: string
+      title: Type
+      description: Type of item associated with this entry
+      enum: ['ADVERSE-MEDIA', 'WARNING', 'SANCTION', 'POLITICAL']
+      example: SANCTION
+    subtype:
+      type: string
+      title: Sub Type
+      description: the sub type of item associated with this entry, provided by the compliance validation and checks service
+      example: sanction, pep-class-1n, pep-class-2
+    countryCodes:
+      title: What is the source country code associated with this entry
+      type: array
+      items:
+        type: string
+    createdAt:
+      title: When was the result created
+      type: string
+      format: date-time
+    updatedAt:
+      title: When was the result last updated
+      type: string
+      format: date-time

@@ -1,0 +1,18 @@
+parserOptions:
+  ecmaVersion: 2018
+plugins:
+  - node
+  - mocha
+extends:
+  - "eslint:recommended"
+  - "plugin:node/recommended"
+rules:
+  semi: [2, "never"]
+  "node/exports-style":
+    - "error"
+    - "module.exports"
+  "node/no-unpublished-bin": "error"
+  "node/process-exit-as-throw": "error"
+  "node/no-unpublished-require": ["error", { "allowModules": ["bluebird"] }]
+  "mocha/no-exclusive-tests": "error"
+  'no-console': 'error'

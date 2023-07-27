@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+const moment = require('moment')
+const jwtSimple = require('jwt-simple')
+
+const getToken = require('../app/services/token/get')
+const config = require('../config')
+
+
+function decode(token) {
+  return jwtSimple.decode(token, config.get('auth').secret, true, 'HS512')
+}
+
+
+// https://tools.ietf.org/html/rfc7519#section-4.1
+const now = moment()
+const data = {
+  userId: process.env["USER_ID"] || '1',
+  resources: (process.env["RESOURCES"] || '*').split(','),
+  scopes: (process.env["SCOPES"] || '*').split(','),
+  expiration: config.get('auth').ttl
+}
+
+async function log() {
+  let token = process.env["TOKEN"]
+  if (!token) {
+    token = await getToken(data)
+  }
+  console.log('Token:\n%s\n', token)
+
+  payload = decode(token)
+  console.log('Token Information: \n%j\n', payload)
+  console.log('iat - %s', moment.unix(payload.iat).format())
+  console.log('exp - %s', moment.unix(payload.exp).format())
+}
+
+log().catch(console.log).finally(() => process.exit(0))

@@ -1,0 +1,25 @@
+[
+  {
+    "position": 0,
+    "questionId": "are-all-account-owners",
+    "answer": "Yes"
+  },
+  {
+    "position": 1,
+    "questionId": "will-you-mantain",
+    "answer": null
+  },
+  {
+    "position": 3,
+    "questionId": "name-bank",
+    "answer": "Gotham City Bank"
+  },
+  {
+    "position": 4,
+    "questionId": "usCitizen",
+    "answer": "No",
+    "type": "string",
+    "subtype": "enum",
+    "text": "Are all account owners US citizens?"
+  }
+]

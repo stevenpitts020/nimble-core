@@ -1,0 +1,33 @@
+/users:
+  post:
+    tags:
+      - User
+    summary: Create a new user
+    description: Create a new user
+    operationId: userRegister
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UserAuth'
+      description: User auth object to be created
+      required: true
+    responses:
+      '201':
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'
+      '409':
+        description: A user with that email already exists
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/responses/Conflict'

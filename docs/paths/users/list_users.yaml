@@ -1,0 +1,32 @@
+/users:
+  get:
+    tags:
+      - User
+    summary: Get a list of users
+    description: Method to get a paginated list of users
+    operationId: getUsers
+    security:
+      - ApiKeyAuth: []
+    parameters:
+      - in: query
+        name: sort
+        required: false
+        description: Sort users by user property
+        schema:
+          type: string
+          enum:
+            - -id
+          default: -id
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/User'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'

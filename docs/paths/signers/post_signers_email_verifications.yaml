@@ -1,0 +1,31 @@
+/signers/{id}/email-verifications:
+  post:
+    tags:
+      - Signer
+    summary: Create a Signer Email Verification
+    description: Used to send the email verification link to a signer
+    parameters:
+      - in: path
+        name: id
+        description: uuid signer id
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+      - name: token
+        in: path
+        description: A JWT token to authenticate the request as an alternative to the Authentication Bearer header
+        required: false
+        schema:
+          type: string
+    security:
+      - bearer: []
+    responses:
+      '204':
+        description: Created
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'
+      '404':
+        $ref: '#/components/responses/NotFound'

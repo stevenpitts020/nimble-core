@@ -1,0 +1,123 @@
+image: docker:latest
+
+variables:
+  BUILD_IMAGE: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHORT_SHA}"
+  SLUG_BUILD_IMAGE: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_SLUG}-builder"
+  MASTER_BUILD_IMAGE: "${CI_REGISTRY_IMAGE}:master-builder"
+  LOCALSTACK_VERSION: 0.12.6
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_DRIVER: overlay2
+  POSTGRES_DB: pgdb
+  POSTGRES_USER: pguser
+  POSTGRES_PASSWORD: pgpass
+
+stages:
+  - build
+  - check
+  - deploy
+
+build:
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - echo ${CI_BUILD_TOKEN} | docker login --username gitlab-ci-token --password-stdin ${CI_REGISTRY}
+  script:
+    # pull the latest versions of the image, in order, to populate the build cache
+    - docker pull ${SLUG_BUILD_IMAGE} || true
+    - docker pull ${MASTER_BUILD_IMAGE} || true
+    - docker build --target builder --cache-from ${SLUG_BUILD_IMAGE} --cache-from ${MASTER_BUILD_IMAGE} -f Dockerfile -t ${SLUG_BUILD_IMAGE} .
+    - docker build --target runtime --cache-from ${SLUG_BUILD_IMAGE} -f Dockerfile -t ${BUILD_IMAGE} .
+    - docker push ${CI_REGISTRY_IMAGE} --all-tags
+  interruptible: true
+  except: [ 'tags' ]
+
+test:
+  stage: check
+  needs: [ 'build' ]
+  services:
+    - docker:dind
+    - postgres:11
+  before_script:
+    - echo ${CI_BUILD_TOKEN} | docker login --username gitlab-ci-token --password-stdin ${CI_REGISTRY}
+    - docker run --name localstack -e CI=true -e AWS_DEFAULT_REGION=us-east-1 -e AWS_ACCESS_KEY_ID=test -e AWS_SECRET_ACCESS_KEY=test -p 4566:4566 -p 8055:8080 -d localstack/localstack:${LOCALSTACK_VERSION:-0.12.6}
+    - docker cp scripts/localstack.sh localstack:/tmp
+    - docker exec localstack /bin/sh /tmp/localstack.sh
+  script:
+    - export JDBC_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_PORT_5432_TCP_ADDR}:${POSTGRES_PORT_5432_TCP_PORT}/${POSTGRES_DB}
+    - docker run -e CI=true -e JDBC_URL=${JDBC_URL} --link localstack -v coverage:/app/coverage -i "${BUILD_IMAGE}" yarn test:ci
+  coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
+  artifacts:
+    when: always
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/cobertura-coverage.xml
+  interruptible: true
+  except: [ 'tags' ]
+
+lint:
+  stage: check
+  needs: [ 'build' ]
+  services:
+    - docker:dind
+  before_script:
+    - echo ${CI_BUILD_TOKEN} | docker login --username gitlab-ci-token --password-stdin ${CI_REGISTRY}
+  script:
+    - docker run -e "CI=true" -i "${BUILD_IMAGE}" yarn lint
+  interruptible: true
+  except: [ 'tags' ]
+
+.deploy_template: &deploy_template
+  services:
+    - docker:dind
+  interruptible: false
+  before_script:
+    # configure the aws-cli
+    - alias aws="docker run --rm -i -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -e AWS_REGION=${AWS_REGION} amazon/aws-cli"
+    # login to aws elastic container registry (ECR)
+    - aws ecr --region ${AWS_REGION} get-login-password | docker login --username AWS --password-stdin ${DOCKER_DEPLOYMENT_REGISTRY}
+    # login to gitlab docker registry
+    - echo ${CI_BUILD_TOKEN} | docker login --username gitlab-ci-token --password-stdin ${CI_REGISTRY}
+  script:
+    - docker pull ${BUILD_IMAGE}
+    # tag and push image to it's environment namespace in ECR (TODO: tag and push the version as well)
+    - docker tag ${BUILD_IMAGE} ${DOCKER_DEPLOYMENT_REGISTRY}/nimble-core:${NAMESPACE}-latest
+    - docker push ${DOCKER_DEPLOYMENT_REGISTRY}/nimble-core:${NAMESPACE}-latest
+
+development:
+  <<: *deploy_template
+  stage: deploy
+  needs: [ 'build' ]
+  resource_group: development
+  environment:
+    name: development
+    url: https://api-dev.nimblefi.com/docs
+  variables:
+    NAMESPACE: dev
+  when: manual
+
+staging:
+  <<: *deploy_template
+  stage: deploy
+  needs: [ 'build' ]
+  resource_group: staging
+  environment:
+    name: staging
+    url: https://api-staging.nimblefi.com/docs
+  variables:
+    NAMESPACE: staging
+  when: manual
+
+production:
+  <<: *deploy_template
+  stage: deploy
+  needs: [ 'build', 'development', 'test' ]
+  resource_group: production
+  environment:
+    name: production
+    url: https://api.nimblefi.com/docs
+  variables:
+    NAMESPACE: prod
+  when: manual
+  only: [ 'master' ]

@@ -1,0 +1,45 @@
+/signers:
+  post:
+    tags:
+      - Signer
+    summary: Create Signer
+    description: Create Signer
+    security:
+      - bearer: ['account_requests']
+    requestBody:
+      description: Signer information
+      required: true
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/Signer'
+              - type: object
+                required:
+                  - role
+                  - email
+              - properties:
+                  accountRequestId:
+                    type: string
+                    writeOnly: true
+                    format: uuidv4
+                    title: the ID of the account request this signer is assigned to
+                    description: account request identifier
+                    example: a74f9092-5889-430a-9c19-6712f9f68090
+    responses:
+      '201':
+        description: Created
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Signer'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'
+      '403':
+        $ref: '#/components/responses/Forbidden'
+      '412':
+        $ref: '#/components/responses/PreCondition'
+      '500':
+        $ref: '#/components/responses/InternalError'

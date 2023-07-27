@@ -1,0 +1,8 @@
+UserToken:
+  type: object
+  properties:
+    token:
+      type: string
+      title: JWT Token
+      description: A JWT token containing the authentication information for this user.
+      example: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOiJhOGJiYzZhNS1lNjBjLTRkZGItODVmNS04OWY1OWJhZGIzMGUiLCJzY29wZXMiOlsiKiJdLCJyZXNvdXJjZXMiOlsiKiJdLCJpc3MiOiJodHRwczovL2FwaS5kZXYubmltYmxlZmkuY29tIiwic3ViIjoiaHR0cHM6Ly9hcGkuZGV2Lm5pbWJsZWZpLmNvbS92MS91c2Vycy9hOGJiYzZhNS1lNjBjLTRkZGItODVmNS04OWY1OWJhZGIzMGUiLCJhdWQiOiJodHRwczovL2FwaS5kZXYubmltYmxlZmkuY29tIiwiZXhwIjoxNTg5NDU2NTI3LCJpYXQiOjE1ODk0NDkzMjd9.6WVsC-rWc4eMkAaKER6BImLWDMtysJdXBkBKEvZf7CkTLOf6oV1JRxdJVJdtIaO9WLSm8P9ys_4te1RVgctdiQ

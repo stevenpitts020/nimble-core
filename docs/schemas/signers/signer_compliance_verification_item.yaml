@@ -1,0 +1,62 @@
+SignerComplianceVerificationItem:
+  type: object
+  properties:
+    id:
+      type: string
+      format: uuidv4
+      title: uuid
+      readOnly: true
+      description: Result Identifier
+      example: 2552ab85-08da-4bb5-be00-9e94d282d311
+    fullName:
+      title: The full name of this result
+      type: string
+    nameAka:
+      title: Other names for this result
+      type: array
+      items:
+        type: string
+    dateOfBirth:
+      title: The birthdate of this result
+      type: string
+    dateOfDeath:
+      title: The date of death of this result
+      type: string
+    countries:
+      title: Countries with information about this result
+      type: array
+      items:
+        type: string
+    associates:
+      title: Any associates of this result
+      type: array
+      items:
+        type: string
+    adverseMedia:
+      title: A list of entries found about results of the type Media
+      type: array
+      items:
+        $ref: '#/components/schemas/SignerComplianceVerificationListEntry'
+    warnings:
+      title: A list of entries found about results of the type Warning
+      type: array
+      items:
+        $ref: '#/components/schemas/SignerComplianceVerificationListEntry'
+    sanctions:
+      title: A list of entries found about results of the type Sanction
+      type: array
+      items:
+        $ref: '#/components/schemas/SignerComplianceVerificationListEntry'
+    politicalExposure:
+      title: A list of entries found about results of the type Political
+      type: array
+      items:
+        $ref: '#/components/schemas/SignerComplianceVerificationListEntry'
+    createdAt:
+      title: When was the result created
+      type: string
+      format: date-time
+    updatedAt:
+      title: When was the result last updated
+      type: string
+      format: date-time

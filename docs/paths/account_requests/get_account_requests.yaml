@@ -1,0 +1,30 @@
+/account-requests/{id}:
+  get:
+    tags:
+      - Account Request
+    summary: Get an account request
+    description: Method to get an account request
+    operationId: getAccountRequest
+    parameters:
+      - name: id
+        in: path
+        description: Account request ID
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+    security:
+      - bearer: []
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'
+      '403':
+        $ref: '#/components/responses/Forbidden'
+      '404':
+        $ref: '#/components/responses/NotFound'

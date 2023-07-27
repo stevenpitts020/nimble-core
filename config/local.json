@@ -1,0 +1,57 @@
+{
+  "protocol": "http",
+  "aws": {
+    "key": "FAKE_ID",
+    "secret": "FAKE_SECRET",
+    "endpoint": "http://localhost",
+    "region": "us-east-1",
+    "s3_endpoint": "http://localhost:4566/",
+    "s3_upload_bucket": "local-uploads",
+    "s3_asset_bucket": "local-uploads",
+    "ses_endpoint": "http://localhost:4566",
+    "ses_email_from": "test@localhost",
+    "lambda_endpoint": "http://localhost:4566",
+    "lambda_region": "us-east-2"
+  },
+  "sns": {
+    "endpoint": "http://localhost:4566",
+    "accessKeyId": "FAKE_ID",
+    "secretAccessKey": "FAKE_SECRET",
+    "region": "us-east-1",
+    "topicSigner": "arn:aws:sns:us-east-1:000000000000:core-local-signers",
+    "topicAccountRequest": "arn:aws:sns:us-east-1:000000000000:core-local-account-requests"
+  },
+  "sqs": {
+    "endpoint": "http://localhost:4566",
+    "accessKeyId": "FAKE_ID",
+    "secretAccessKey": "FAKE_SECRET",
+    "region": "us-east-1",
+    "complianceQueue": "http://localhost:4566/queue/core-local-signers-compliance",
+    "identityQueue": "http://localhost:4566/queue/core-local-signers-identity",
+    "accountRequestQueue": "http://localhost:4566/queue/core-local-account-requests",
+    "creditReportQueue": "http://localhost:4566/queue/core-local-signers-credit-report"
+  },
+  "lambda": {
+    "pdfTransformARN":  "local-htmltopdf"
+  },
+  "image": {
+    "assets_cdn": "",
+    "uploads_cdn": ""
+  },
+  "complyAdvantage": {
+    "baseUrl": "https://api.complyadvantage.com",
+    "secret": "secret"
+  },
+  "docusign": {
+    "userID": "f5c1a3fc-f745-4bc1-a947-69c60909be8e",
+    "clientID": "a7b3c943-0a0a-4570-8575-fcef0f37ace6",
+    "templateID": "86b87fff-101c-4bfc-b5ee-914c062034ac",
+    "accountID": "8872016",
+    "privateKey": "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFcEFJQkFBS0NBUUVBa0R4UUlCV3NyT2ZQMEh2V0FnMThFMEJHRnNpSEpMcDFnN0liRDNqeWxtajRrTlVtCnNXOFgxaWllRkVxcDI2c3lzSGFXSVluUU9zd3gwT2RSNFBKZ2NGdS90ZzBpc2JhSkRPdEdPaS9FWGZTNjd5dmMKRkxwa3YzenRnbUhlNlFkeDBWRjhGTXlUcGFaaWpxZm80b3FPZFNoaVpHOFhkRi9ob3VHeEh5Sk8rSGNwOTNMWQovY3V2eFRQeVBPOVJIWlZ1SmhPR3BmVzJTdXlsNU9oeDh6KzB0ckRFc0NFZ1pqSXVzU2QwSGZPdGJIeWFQSUVUCjExVXZ3MUsvODdQZkZpTmhEUkdBdDN3Sy9sOUJEc1JPZjFkNVNjTzBLWklhYTFSaG5EV3I5YUF5VEUzdVo2SisKV1NrcEt0TWNRdDBwVHppQnROV3FBdWdpbUNNTVNBTzFJMG9qbFFJREFRQUJBb0lCQUJSZXpFTW54SDRiOUJ2aAo3WERYUmpOeTA2TkNtV0dNeXUxNVVUeVBiSlZsQ0Z2dUdwdWJFTDhBZUFqdUhZeW1ZaytOUS9sREhTczhyUGx2CnZmN2F4RmVDQWJLY3FzNTE5T2VqNzhSbWZDRjMzNUhKUERrYU5RSGRTeTdya3grT20xckFXeG1WNWZGU2JSOXcKSStJZ3h1dFJjNG56TFprVU5JbjhQWGRqOFVyQ1ZVMWdRdVdmVWpRWjJLT3QwY1Qwb05xMlBDOTh3RjlGWUdhNAp5ak9KaGFtRWg0QzlCQ3ZGd3YvckkycVNXeHFwdFF6czRtaFlCcFRaMXZLWXZueWF6NnREVWMzenFOc2JjMndPCmhEaVhaaTJKeHJ3THVyenpCbDZZdmZHNkhEOGNCNmhsTC93SzBaUmlGYlU3bENFQ3Zyd2VMdjgvQTc5eTdzQXgKS2VncU9ORUNnWUVBeWQweTFnK1p6eTRhY2xTOWVWRzlFRE5YTzU3Y2ZtY3JwaEd2N0NTODQ0Q20rZy9LY3VNVwpnYmt4dVJhODJ4NFdQMklleUROMmo2djBTZU82L2VULzhFeHBvcnZ3Z1ljd3lXUWZ6bE5vZm1ud1Iwa09MQzQ1Cms0K3dKSWpMUXJwQ2pMdmQ0T2s2VzhYVlN6UStvUE0rVlhVUXVBclNDQUNJMjhNSDV2VUdTeVVDZ1lFQXR1cXUKdjVzakphWVJnYkMyZ2grWkQ5Mmt1VlppSDRCTkN4UlJFSmFBMlJRdDBPelFVb0g3bm0zWDYxZDhRTllBTVVCRQpDcTJIL0xyWXZPelk5MlJlRnUrK253dU5yQWdCdFZMeis4UjVRRWoyeGErNFNZVkQ3Sm5zS1YzTVFqcUx6bW1RCmw3dTFhK0xIRjRCYldxRmp3bHpGZ0lsanpicnpwdnYxZlZiM3c3RUNnWUVBdUpNOUxHWFBhWlRxTWFneUo0QUoKczRwK05OR3BJeHNLMmlwS0JVNENPTE1sK25mOTBOYTdlWm53VVNEdFJoMVlrbFFSZVZVMUQyRlhXVWlWYmhtNQp1K3JpbkIza1owdEozSnRrU2JBU1Y2UmVRNUFWR1dpYTFNWUpkUjV2WEhBYThidkZ3U1VBYTNHVStkS25nVnRvCm41TU8ybmxxV2s3QzFNNmJweDVieHRFQ2dZRUFvaXUvY3JFZ29DaDBMUDkzVURhamhhV0VmYTFRb1kwbXdVUHAKKzBMMFNZSFNmUUQ0VWE1Y1gwSVR4TnR6bGlnbFU0VWV6amk3OEIzWU91ZmlGTFF2bHpaSFVzcnplQ3BCR1huSwpSdFVTaXlRbFpXODlmREZpMzBvNFR4U1NHOFc4WGV6Si9UeTJ4RWZ6SzZycFU1ankwVWRlODI3YnhYS1N3dUZ2CjdRaEY4b0VDZ1lBcFVORDVvWTN0T0tWV2VtV1U3MEtNUWlIUHZNM1R3czhLeUpXbkcyaUZwZlNTWGw1MHFRN28KcGR0SVNmZzJjNlhoYk8rRTFEUnFDK1I0NnUrZStNZWIvZXNuTDhXbE02UDZ3cVR1R3VkeSs1dVJpS3RRSE9xRwpLQWU0N0packZHNlA5M2xLUDJxWk9IL1g0cm1raTNHSDRRa2VDSjVlZDFaTHByUlhRTmRHcnc9PQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo=",
+    "documentID": "99672193",
+    "basePath": "https://demo.docusign.net/restapi"
+  },
+  "sentry": {
+    "dsn": ""
+  }
+}

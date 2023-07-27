@@ -1,0 +1,28 @@
+/auth/recover/{email}:
+  put:
+    tags:
+      - Auth
+    summary:
+    description: Uses an account recovery code to change the user's password
+    operationId: authChangePassword
+    parameters:
+      - in: body
+        name: body
+        description: Account Recovery object
+        required: true
+        schema:
+          $ref: '#/components/schemas/UserAuthRecovery'
+      - name: email
+        in: path
+        description: The email the user used to register
+        required: true
+        schema:
+          type: string
+          format: email
+    responses:
+      '204':
+        description: OK
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '404':
+        $ref: '#/components/responses/NotFound'

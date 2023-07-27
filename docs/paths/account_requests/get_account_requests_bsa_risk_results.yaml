@@ -1,0 +1,39 @@
+/account-requests/{id}/bsa-risk-results:
+  get:
+    tags:
+      - Account Request
+    summary: Fetch BSA Questionnaire answer by Account Request Id
+    description: Fetch BSA Questionnaire answer by Account Request Id
+    operationId: getAccountRequestsBsaRiskResult
+    parameters:
+      - in: path
+        name: id
+        description: uuid account request id
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+      - in: query
+        name: sort
+        required: false
+        description: Sort by position property
+        schema:
+          type: string
+          enum:
+            - -position
+            - position
+          default: position
+    security:
+      - bearer: []
+      - bearer: ['account_requests']
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/BsaRiskResult'
+      '400':
+        $ref: '#/components/responses/BadRequest'

@@ -1,0 +1,52 @@
+/signers/{id}/credit-reports:
+  get:
+    tags:
+      - Signer
+    summary: Get Signer credit reports by Id
+    description: Fetch detailed information like credit score, debts and more by Signer Id
+    parameters:
+      - in: path
+        name: id
+        description: uuid signer id
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+      - name: limit
+        in: query
+        required: false
+        description: Limit number of records
+        schema:
+          type: integer
+      - name: offset
+        in: query
+        required: false
+        description: Offset for paginating records
+        schema:
+          type: integer
+          default: 0
+      - name: sort
+        in: query
+        required: false
+        description: Sort records by property
+        schema:
+          type: string
+          enum:
+            - updated_at
+            - -updated_at
+          default: updated_at
+    security:
+      - bearer: []
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/SignerCreditReport'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '404':
+        $ref: '#/components/responses/NotFound'

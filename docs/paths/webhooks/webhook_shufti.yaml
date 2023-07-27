@@ -1,0 +1,38 @@
+/webhooks/shufti/identity-verification:
+  post:
+    tags:
+      - Webhooks
+    summary: post updates for identity verifications
+    description: this is a webhook that allows shufti to ping us with indentity verification results
+    operationId: postShuftiWebhook
+    requestBody:
+      description: identity verifications object
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - reference
+              - event
+            properties:
+              reference:
+                type: string
+                format: uuidv4
+                title: signer reference uuid
+                description: signer id
+              event:
+                type: string
+                title: shufti verification status
+                description: Shufti verification event status
+              verification_result:
+                type: object
+                title: shufti verification result
+                description: Shufti verification event result
+    responses:
+      '200':
+        description: OK
+      '401':
+        $ref: '#/components/responses/Unauthorized'
+      '400':
+        $ref: '#/components/responses/BadRequest'

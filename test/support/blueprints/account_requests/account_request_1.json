@@ -1,0 +1,227 @@
+{
+  "id": "2552ab85-08da-4bb5-be00-9e94d282d348",
+  "status": "APPROVED",
+  "statusEmailBody": "example body",
+  "statusEmailSubject": "example subject",
+  "statusUpdatedAt": "2019-03-17T12:34:11.341Z",
+  "statusUpdatedBy": {
+    "createdAt": "2018-02-16T12:32:03.341Z",
+    "email": "demouser@nimblefi.com",
+    "firstName": "Test",
+    "id": "1052ab85-08da-4bb5-be00-9e94d282d310",
+    "lastName": "User",
+    "roles": [
+      "employee"
+    ],
+    "status": "ACTIVE",
+    "phone": null,
+    "_refLink": "http://localhost:3001/wearesingular.com/onboarding/?_rbid=1052ab85-08da-4bb5-be00-9e94d282d310"
+  },
+  "contractDocumentCreatedAt": "2019-03-17T12:31:11.341Z",
+  "contractDocumentEnvelopeStatus": "COMPLETED",
+  "contractDocumentEnvelopeStatusUpdatedAt": "2019-03-17T13:34:11.341Z",
+  "contract": {
+    "uri": "http://localhost:8080/v1/documents/63a14305-8b56-4c26-b62d-576677bf8e41?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOm51bGwsInNjb3BlcyI6WyJkb2N1bWVudHMiXSwicmVzb3VyY2VzIjpbImRvY3VtZW50cyM2M2ExNDMwNS04YjU2LTRjMjYtYjYyZC01NzY2NzdiZjhlNDEiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwic3ViIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3YxL3VzZXJzL251bGwiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjkwMCwiaWF0IjowfQ.FQGalyjBQu6CITb3WY-dvX3p50pRfLAOtd8TakAvwXMjfqd2jwHnzVAtMv2VDNx1aW7OuIu7I9Hyfg-9kat3RQ"
+  },
+  "bsa": {
+    "risk": "Low",
+    "score": 2
+  },
+  "verificationStatus": {
+    "faceStatus": "VALID",
+    "documentStatus": "INVALID",
+    "addressStatus": "INVALID",
+    "sanctionsStatus": "MATCH",
+    "mediaStatus": "MATCH",
+    "politicalExposure": "MATCH"
+  },
+  "signers": [
+    {
+      "id": "2e31d8c0-1226-4651-8a5d-4bd8aa454722",
+      "status": "SIGNED",
+      "address": "123 main street apt. 1",
+      "city": "Lisbon",
+      "consent": true,
+      "consentAccountOpening": true,
+      "consentCommunication": false,
+      "consentPrivacyPolicy": true,
+      "emailVerified": true,
+      "emailVerifiedAt": "2018-02-16T11:32:03.341Z",
+      "dateOfBirth": "1945-12-06",
+      "email": "example@nimblefi.com",
+      "firstName": "George",
+      "lastName": "Constanza",
+      "middleName": null,
+      "phoneNumber": "(233) 555-3333",
+      "role": "PRIMARY",
+      "ssn": "333-33-3333",
+      "state": "CA",
+      "zipCode": "22222",
+      "employer": "Singular",
+      "idProofDocument": {
+        "backIdProof": {
+          "default": "http://localhost:8080/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOm51bGwsInNjb3BlcyI6WyJkb2N1bWVudHMiXSwicmVzb3VyY2VzIjpbImRvY3VtZW50cyNhNzRmOTA5Mi01ODg5LTQzMGEtOWMxOS02NzEyZjlmNjgwOTAiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwic3ViIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3YxL3VzZXJzL251bGwiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjkwMCwiaWF0IjowfQ.CVTmvkWe2rfCLYAmbSv4cUa4Cy2VmR_-3kerG9wia1gEwmVGawaujdNfqQ7OhUYrYffl6c1nfXQuWINX17zlKQ"
+        },
+        "frontIdProof": {
+          "default": "http://localhost:8080/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOm51bGwsInNjb3BlcyI6WyJkb2N1bWVudHMiXSwicmVzb3VyY2VzIjpbImRvY3VtZW50cyNhNzRmOTA5Mi01ODg5LTQzMGEtOWMxOS02NzEyZjlmNjgwOTAiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwic3ViIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3YxL3VzZXJzL251bGwiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjkwMCwiaWF0IjowfQ.CVTmvkWe2rfCLYAmbSv4cUa4Cy2VmR_-3kerG9wia1gEwmVGawaujdNfqQ7OhUYrYffl6c1nfXQuWINX17zlKQ"
+        },
+        "expirationDate": "2022-02-16",
+        "issuedDate": "2000-02-16",
+        "issuer": "FL",
+        "number": "109409348",
+        "type": "USDL"
+      },
+      "checkSanction": null,
+      "sanctionVerifiedAt": null,
+      "checkPoliticalExposure": null,
+      "politicalExposureVerifiedAt": null,
+      "checkAdverseMedia": null,
+      "adverseMediaVerifiedAt": null,
+      "checkAntiMoneyLaundering": null,
+      "antiMoneyLaunderingVerifiedAt": null,
+      "contractDocumentSignerStatus": "SIGNED",
+      "contractDocumentSignerStatusUpdatedAt": "2018-02-16T12:32:03.341Z",
+      "invitedAt": "2018-02-16T11:32:03.341Z",
+      "selfie": {
+        "default": "http://localhost:8080/v1/documents/a74f9092-5889-430a-9c19-6712f9f68090?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOm51bGwsInNjb3BlcyI6WyJkb2N1bWVudHMiXSwicmVzb3VyY2VzIjpbImRvY3VtZW50cyNhNzRmOTA5Mi01ODg5LTQzMGEtOWMxOS02NzEyZjlmNjgwOTAiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwic3ViIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3YxL3VzZXJzL251bGwiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjkwMCwiaWF0IjowfQ.CVTmvkWe2rfCLYAmbSv4cUa4Cy2VmR_-3kerG9wia1gEwmVGawaujdNfqQ7OhUYrYffl6c1nfXQuWINX17zlKQ"
+      },
+      "verificationStatus": {
+        "faceStatus": "VALID",
+        "faceUpdatedAt": "2018-03-16T11:32:03.341Z",
+        "documentStatus": "VALID",
+        "documentUpdatedAt": "2018-03-16T11:32:03.341Z",
+        "addressStatus": "INVALID",
+        "addressUpdatedAt": "2018-03-16T11:32:03.341Z",
+        "sanctionsStatus": "NOMATCH",
+        "sanctionsUpdatedAt": "2018-03-16T11:32:03.341Z",
+        "mediaStatus": "MATCH",
+        "mediaUpdatedAt": "2018-03-16T11:32:03.341Z",
+        "politicalExposure": "NOMATCH",
+        "politicalExposureUpdatedAt": "2018-03-16T11:32:03.341Z"
+      },
+      "remoteMetadata": {}
+    },
+    {
+      "id": "2e31d8c0-1226-4651-8a5d-4bd8aa454721",
+      "status": "PENDING",
+      "address": null,
+      "city": null,
+      "consent": true,
+      "consentAccountOpening": true,
+      "consentCommunication": false,
+      "consentPrivacyPolicy": true,
+      "dateOfBirth": null,
+      "emailVerified": false,
+      "emailVerifiedAt": null,
+      "email": "psousa+dev1@wearesingular.com",
+      "firstName": "John",
+      "lastName": "McClane",
+      "middleName": null,
+      "phoneNumber": null,
+      "role": "SECONDARY",
+      "ssn": null,
+      "state": null,
+      "zipCode": null,
+      "employer": null,
+      "idProofDocument": {
+        "backIdProof": {
+          "default": null
+        },
+        "frontIdProof": {
+          "default": null
+        },
+        "expirationDate": "2022-02-16",
+        "issuedDate": "2000-02-16",
+        "issuer": "FL",
+        "number": "123123123",
+        "type": "USDL"
+      },
+      "checkSanction": null,
+      "sanctionVerifiedAt": null,
+      "checkPoliticalExposure": null,
+      "politicalExposureVerifiedAt": null,
+      "checkAdverseMedia": null,
+      "adverseMediaVerifiedAt": null,
+      "checkAntiMoneyLaundering": null,
+      "antiMoneyLaunderingVerifiedAt": null,
+      "contractDocumentSignerStatus": "SENT",
+      "contractDocumentSignerStatusUpdatedAt": "2018-02-16T12:32:03.341Z",
+      "invitedAt": "2018-02-16T12:11:03.341Z",
+      "selfie": {
+        "default": null
+      },
+      "verificationStatus": {
+        "faceStatus": "VALID",
+        "faceUpdatedAt": "2018-02-16T12:11:03.341Z",
+        "documentStatus": "INVALID",
+        "documentUpdatedAt": "2018-02-16T12:11:03.341Z",
+        "addressStatus": "VALID",
+        "addressUpdatedAt": "2018-02-16T12:11:03.341Z",
+        "sanctionsStatus": "MATCH",
+        "sanctionsUpdatedAt": "2018-02-16T12:11:03.341Z",
+        "mediaStatus": "NOMATCH",
+        "mediaUpdatedAt": "2018-02-16T12:11:03.341Z",
+        "politicalExposure": "MATCH",
+        "politicalExposureUpdatedAt": "2018-02-16T12:11:03.341Z"
+      },
+      "remoteMetadata": {}
+    }
+  ],
+  "createdAt": "2019-03-16T12:34:11.341Z",
+  "productConfigurations": [
+    {
+      "initialDeposit": 250000099,
+      "productId": "3552ab85-08da-4bb5-be00-9e94d282d310",
+      "createdAt": "2019-03-16T12:34:11.341Z",
+      "product": {
+        "id": "3552ab85-08da-4bb5-be00-9e94d282d310",
+        "name": "Simple Checking",
+        "sku": "simple-checking",
+        "category": "CHECKING",
+        "options": [
+          {
+            "id": null,
+            "category": "account_number",
+            "key": "account_number",
+            "title": "Account Number",
+            "value": "001",
+            "lead": null,
+            "annotation": null,
+            "parentId": null
+          },
+          {
+            "id": "7b9c52a2-c542-4031-8342-5fa29a2f6d0e",
+            "category": "another-choice",
+            "key": "optionB",
+            "title": "Option B",
+            "value": "B",
+            "lead": "Option B lead",
+            "annotation": "Option B annotation",
+            "parentId": "3552ab85-0000-0000-0000-9e94d282d312"
+          },
+          {
+            "id": null,
+            "category": "some-choice",
+            "key": "optionA",
+            "title": "Option A",
+            "value": "A",
+            "lead": null,
+            "annotation": null,
+            "parentId": null
+          }
+        ],
+        "summary": "Simple checking means no fees with online statements and it means no minimum balance required to maintain the account, access to online banking, bill pay and more. You get the benefits you want.",
+        "content": "<p>Simple checking <strong>lorem ipsum</strong> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n",
+        "createdAt": "2020-02-06T12:32:03.341Z"
+      }
+    }
+  ],
+  "branchId": "2552ab85-0000-0000-0000-000000000001",
+  "branch": {
+    "id": "2552ab85-0000-0000-0000-000000000001",
+    "name": "branch 001",
+    "externalId": "b001"
+  },
+  "referredBy": null,
+  "referrers": []
+}

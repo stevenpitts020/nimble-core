@@ -1,0 +1,25 @@
+/signers/{id}/invites:
+  post:
+    tags:
+      - Signer
+    summary: Create a Signer Invite
+    description: Create a new invite for the users
+    parameters:
+      - in: path
+        name: id
+        description: uuid signer id
+        required: true
+        schema:
+          type: string
+          format: uuidv4
+    security:
+      - bearer: []
+    responses:
+      '201':
+        description: Created
+      '400':
+        $ref: '#/components/responses/BadRequest'
+      '401':
+        $ref: '#/components/responses/Unauthorized'
+      '404':
+        $ref: '#/components/responses/NotFound'

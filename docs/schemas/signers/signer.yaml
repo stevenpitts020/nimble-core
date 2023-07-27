@@ -1,0 +1,215 @@
+Signer:
+  type: object
+  required:
+    - id
+  properties:
+    id:
+      type: string
+      format: uuidv4
+      title: signer uuid
+      readOnly: true
+      description: signer identifier
+      example: 2552ab85-08da-4bb5-be00-9e94d282d311
+    status:
+      type: string
+      readOnly: true
+      title: Status
+      enum: ['INVITED', 'INCOMPLETE', 'PENDING', 'SIGNED']
+      description: >-
+        The status of the signer:
+
+          - Invited: the signer was invited to join to an account request;
+          - Incomplete: the signer is still missing some required personal data;
+          - Pending: the signer information is fulfilled but the agreement is not signed yet;
+          - Signed: the signer have signed the agreement.
+      example: SIGNED
+    invitedAt:
+      readOnly: true
+      type: string
+      format: date-time
+      title: Invited at
+      description: Date time that references latest timestamp from the invite notification.
+    firstName:
+      type: string
+      title: First Name
+      description: The first name of the signer
+      maxLength: 250
+      example: Sample
+    middleName:
+      type: string
+      title: Last Name
+      description: The middle name of the signer
+      maxLength: 250
+      example: ''
+    lastName:
+      type: string
+      title: Last Name
+      description: The last name of the signer
+      maxLength: 250
+      example: Specimen
+    role:
+      type: string
+      title: Role
+      description: Signer Role
+      enum: ['PRIMARY', 'SECONDARY']
+      example: PRIMARY
+    address:
+      type: string
+      title: Address
+      description: Signer address
+      maxLength: 250
+      example: 123 Main Streey Apt. 1
+    city:
+      type: string
+      title: City
+      description: Signer city
+      maxLength: 250
+      example: ORLANDO
+    state:
+      type: string
+      title: State
+      description: Signer state
+      maxLength: 3
+      example: FL
+    zipCode:
+      type: string
+      title: Zip code
+      description: Signer zip code
+      maxLength: 100
+      example: 17101-0000
+    phoneNumber:
+      type: string
+      title: phone number
+      description: Signer phone number
+      maxLength: 20
+    employer:
+      type: string
+      title: Employer
+      description: Signer current employer name
+      maxLength: 250
+      example: Singular Thinking Lda
+    ssn:
+      type: string
+      title: SSN
+      maxLength: 20
+      description: Signer ssn
+    email:
+      type: string
+      title: Email
+      description: Signer Email
+    dateOfBirth:
+      type: string
+      format: date
+      title: dateOfBirth
+      description: Signer date of birth
+    emailVerified:
+      readOnly: true
+      type: boolean
+      title: Email verification
+      description: Email verification
+    emailVerifiedAt:
+      type: string
+      format: date
+      title: Email verification date
+      description: Email verification date
+      nullable: true
+      readOnly: true
+    consent:
+      type: boolean
+      title: Consent Terms
+      description: Consent for Terms
+      example: true
+    consentAccountOpening:
+      type: boolean
+      title: Consent Account Opening
+      description: Consent for Account Opening
+      example: true
+    consentPrivacyPolicy:
+      type: boolean
+      title: Consent Privacy Policy
+      description: Consent for Privacy Policy
+      example: true
+    consentCommunication:
+      type: boolean
+      title: Consent Communication
+      description: Consent for accepting communication
+      example: true
+    checkSanction:
+      readOnly: true
+      type: boolean
+      nullable: true
+      title: Sanction verification
+      description: Sanction verification
+    sanctionVerifiedAt:
+      readOnly: true
+      type: string
+      format: date
+      title: Sanction verification Date
+      description: Sanction verification Date
+    checkPoliticalExposure:
+      readOnly: true
+      type: boolean
+      nullable: true
+      title: Political exposure verification
+      description: Political exposure verification
+    politicalExposureVerifiedAt:
+      readOnly: true
+      type: string
+      format: date
+      title: Political exposure verification Date
+      description: Political exposure verification Date
+    checkAdverseMedia:
+      readOnly: true
+      type: boolean
+      nullable: true
+      title: Adverse Media verification
+      description: Adverse Media verification
+    adverseMediaVerifiedAt:
+      readOnly: true
+      type: string
+      format: date
+      title: Adverse Media verification Date
+      description: Adverse Media verification Date
+    checkAntiMoneyLaundering:
+      readOnly: true
+      type: boolean
+      nullable: true
+      title: Anti-Money Laundering verification
+      description: Anti-Money Laundering verification
+    antiMoneyLaunderingVerifiedAt:
+      readOnly: true
+      type: string
+      format: date
+      title: Anti-Money Laundering verification Date
+      description: Anti-Money Laundering verification Date
+    contractDocumentSignerStatus:
+      type: string
+      readOnly: true
+      title: Status
+      enum: ['CREATED', 'SENT', 'DELIVERED', 'SIGNED', 'COMPLETED', 'DECLINED', 'AUTORESPONDED', 'FAXPENDING']
+      description: The status of the contract document
+      example: SIGNED
+    contractDocumentSignerStatusUpdatedAt:
+      readOnly: true
+      type: string
+      format: date
+      title: Contract status change date
+      description: the date when contractDocumentSignerStatus last changed
+    idProofDocument:
+      allOf:
+        - $ref: '#/components/schemas/IdProofDocument'
+    selfie:
+      allOf:
+        - $ref: '#/components/schemas/Image'
+        - readOnly: true
+    selfieDocumentId:
+      writeOnly: true
+      type: string
+      format: uuidv4
+      title: Selfie Document Id
+      description: Document id associated with the selfie
+      example: 2e31d8c0-1226-4651-8a5d-4bd8aa454790
+    verificationStatus:
+      allOf:
+        - $ref: '#/components/schemas/SignerVerificationStatus'
+        - readOnly: true

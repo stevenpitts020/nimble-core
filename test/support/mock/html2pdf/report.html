@@ -1,0 +1,506 @@
+
+
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" media="all" href="/templates/pushbutton/css/main.css" />
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" media="all" href="/templates/pushbutton/css/pushbutton.php?5" />
+
+
+<link type="text/css" rel="stylesheet" media="print" href="/templates/pushbutton/css/print_report.css" />
+<script src="/preq/js/preq.js"></script>
+<div class="fpn_clientarea_bg">
+<style>
+
+.accounttrader table td {
+	padding:2px;
+}
+
+.summarycontainer {
+	width:100%;
+	max-width:637px;
+	max-width:700px;
+}
+
+.summarycontainer .creditheader {
+	width:100%;
+}
+
+.reportsummary {
+	width:100%;
+}
+
+.reportsummary td {
+	padding:5px 20px 5px 20px;
+}
+.reportsummary td:nth-child(1) {
+
+}
+.reportsummary td:nth-child(2) {
+	text-align:right;
+}
+
+.reportsummary tr:nth-child(even) {
+    background: #F1F1F1;
+}
+
+.pcode {
+	font-size:0.8em;
+}
+
+.specialnote {
+	text-decoration:underline;
+	font-weight:bold;
+}
+
+.ui-autocomplete-category {
+	font-weight: bold;
+	padding: .2em .4em;
+	line-height: 1.5;
+	margin: .2em 0;
+}
+
+.ui-autocomplete {
+	max-height: 500px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+* html .ui-autocomplete {
+	height: 500px;
+}
+</style>
+
+
+<div id="col_2_content" style="padding-top:20px;padding-bottom:20px;">
+
+
+<div style="clear:both;"></div>
+
+
+
+<div style="padding:0 5px 0 5px;">
+
+
+<div id="creditnav">
+	<ul class="nav nav-tabs">
+		<li id="tab_0_l" onclick="do_ctabs(0);" class="active"><a href="javascript:void(0);">Summary</a></li>
+		<li id="tab_1_l" onclick="do_ctabs(1);"><a href="javascript:void(0);">Profile</a></li>
+		<li id="tab_2_l" onclick="do_ctabs(2);"><a href="javascript:void(0);">Account History</a></li>
+		<li id="tab_6_l" onclick="do_ctabs(6);"><a href="javascript:void(0);">Public Records</a></li>
+		<li id="tab_3_l" onclick="do_ctabs(3);"><a href="javascript:void(0);">Inquiries</a></li>
+		<li id="tab_print" onclick="window.print();"><a href="javascript:void(0);" style="background:#f6f6f6;">Print Report</a></li>
+	</ul>
+</div>
+<div style="clear:both;"></div>
+<div id="tab_0">
+<div class="summarycontainer">
+	<div style="padding:20px 20px 0px 20px;">
+		<h3 style="margin-top:0px;float:left;">
+		  - Summary
+		</h3>
+
+	</div>
+	<div style="clear:both;height:10px;"></div>
+
+		<div class="creditheader">Applicant Supplied Information</div>
+		<table class="reportsummary">
+		<tr><td>Phone</td><td></td></tr>
+		<tr><td>Email Address</td><td></td></tr>
+		<tr><td>Address</td><td>, , , </td></tr>
+
+
+		</table>
+		<br>
+
+		<div class="creditheader">Credit Report Summary</div>
+		<table class="reportsummary">
+					<tr><td>Type</td><td>Soft Pull</td></tr>
+			<tr><td>Result</td><td><span style="color:#57AD68;font-weight:bold;" title="Qualified">-</span></td></tr>
+
+
+
+			<tr><td>Score</td><td>-</td></tr>
+			<tr><td>Score Model</td><td>-</td></tr>
+		</table>
+		<br>
+		<div class="creditheader">Debt-to-Income (DTI)</div>
+		<table class="reportsummary">
+
+			<tr><td>Annual Household Income <span title="Annual income is self-reported."><i class="fa fa-question-circle" style="font-size:12px;"></i></span></td><td>-</td></tr>
+			<tr><td>Total Aggregate Balances (Debt)</td><td>$0</td></tr>
+			<tr><td>Total Monthly Payments <span title="Includes all reported monthly payment amounts for fixed accounts (i.e. auto payment). Includes 2% of the current account balance as the monthly payment for all revolving accounts (i.e. credit cards). When 2% is less than $25, but greater than $0, then $25 is used as the monthly payment."><i class="fa fa-question-circle" style="font-size:12px;"></i></span></td><td>$0</td></tr>
+			<tr><td>Debt-to-Income (DTI) Ratio</td><td>-</td></tr>
+			<tr><td>Total Aggregate Balances (Debt) <span class="specialnote">Excluding Real Estate</span></td><td>$0</td></tr>
+			<tr><td>Total Monthly Payments <span class="specialnote">Excluding Real Estate</span></td><td>$0</td></tr>
+			<tr><td>Debt-to-Income (DTI) Ratio <span class="specialnote">Excluding Real Estate</span></td><td>-</td></tr>
+
+		</table>
+		<br>
+
+		<div class="creditheader">Credit Utilization on Open Accounts - Revolving Credit</div>
+		<table class="reportsummary">
+
+			<tr><td>Total Aggregate Credit (Credit Limit)</td><td>$0</td></tr>
+			<tr><td>Total Aggregate Balance </td><td>$0</td></tr>
+			<tr><td>Utilization Ratio (Debt-to-Credit)</td><td></td></tr>
+			<tr><td>Total Aggregate Credit (Credit Limit) <span class="specialnote">Excluding Secured Accounts</span></td><td>$0</td></tr>
+			<tr><td>Total Aggregate Balance <span class="specialnote">Excluding Secured Accounts</span></td><td>$0</td></tr>
+			<tr><td>Utilization Ratio (Debt-to-Credit) <span class="specialnote">Excluding Secured Accounts</span></td><td>
+			</td></tr>
+		</table>
+</div>
+</div>
+
+<div id="tab_1">
+
+	<div style="padding:20px 20px 0px 20px;">
+		<h3 style="margin-top:0px;">
+		  - Profile
+		</h3>
+	</div>
+
+<div style="height:10px;"><br></div>
+
+
+
+<div class="panel-left3">
+<div class="creditheader">
+Addresses
+</div>
+
+    <div style="margin: 6px 28px 10px 28px; padding: 6px 0;">
+
+
+    </div>
+
+
+</div>
+
+<div class="panel-right3">
+
+
+	<div class="creditheader">
+	Employment
+	</div>
+
+    <div style=" margin: 6px 28px 10px 28px; padding: 6px 0;">
+
+        <div class="cpr_output"><label>Current:</label>
+        <br>
+                UNKNOWN
+                </div>
+		<br>
+
+        <div class="cpr_output"><label>Previous:</label>
+        <br>
+                UNKNOWN
+                </div>
+
+    </div>
+
+
+</div>
+
+<div style="clear:both;"></div>
+
+</div><!-- end tab 1 -->
+
+<!---- (2)Account History--------------------------------------------------------------->
+
+
+<div id="tab_2">
+	<div style="padding:20px 20px 0px 20px;">
+	<h3 style="margin-top:0px;">
+	  - Account History
+	</h3>
+	</div>
+<div style="height:10px;clear:both;"></div>
+
+<div class="creditheader" style="margin-bottom:10px;">Payment History Codes</div>
+
+<div style="padding:10px 20px 0px 20px;">
+
+
+<div class="panel-left3">
+	<div class="paymentcode">
+		<div class="monopoly">
+			<div class="payment_history_cell_wrapper" style="width:32px;">
+				<div class="payment_history_cell_year" style="height:10px;background:#57AD68;">
+						&nbsp;	</div>
+				<div class="payment_history_cell_month">
+				0			</div>
+			</div>
+		</div>
+		<div class="pcode">Current with zero balance &ndash; update received</div>
+	</div>
+	<div class="paymentcode">
+		<div class="monopoly">
+			<div class="payment_history_cell_wrapper" style="width:32px;">
+				<div class="payment_history_cell_year" style="height:10px;background:#FDDF3E;">
+						&nbsp;	</div>
+				<div class="payment_history_cell_month">
+				1			</div>
+			</div>
+		</div>
+		<div class="pcode">30 days delinquent</div>
+	</div>
+	<div class="paymentcode">
+		<div class="monopoly">
+			<div class="payment_history_cell_wrapper" style="width:32px;">
+				<div class="payment_history_cell_year" style="height:10px;background:#FDDF3E;">
+						&nbsp;	</div>
+				<div class="payment_history_cell_month">
+				2			</div>
+			</div>
+		</div>
+		<div class="pcode">60 days delinquent</div>
+	</div>
+	<div class="paymentcode">
+		<div class="monopoly">
+			<div class="payment_history_cell_wrapper" style="width:32px;">
+				<div class="payment_history_cell_year" style="height:10px;background:#FDDF3E;">
+						&nbsp;	</div>
+				<div class="payment_history_cell_month">
+				3			</div>
+			</div>
+		</div>
+		<div class="pcode">90 days delinquent</div>
+	</div>
+	<div class="paymentcode">
+		<div class="monopoly">
+			<div class="payment_history_cell_wrapper" style="width:32px;">
+				<div class="payment_history_cell_year" style="height:10px;background:#E1A758;">
+						&nbsp;	</div>
+				<div class="payment_history_cell_month">
+				4			</div>
+			</div>
+		</div>
+		<div class="pcode">120 days delinquent</div>
+	</div>
+	<div class="paymentcode">
+		<div class="monopoly">
+			<div class="payment_history_cell_wrapper" style="width:32px;">
+				<div class="payment_history_cell_year" style="height:10px;background:#E1A758;">
+						&nbsp;	</div>
+				<div class="payment_history_cell_month">
+				5			</div>
+			</div>
+		</div>
+		<div class="pcode">150 days delinquent</div>
+	</div>
+	<div class="paymentcode">
+		<div class="monopoly">
+			<div class="payment_history_cell_wrapper" style="width:32px;">
+				<div class="payment_history_cell_year" style="height:10px;background:#E1A758;">
+						&nbsp;	</div>
+				<div class="payment_history_cell_month">
+				6			</div>
+			</div>
+		</div>
+		<div class="pcode">180 days delinquent</div>
+	</div>
+	<div class="paymentcode">
+		<div class="monopoly">
+			<div class="payment_history_cell_wrapper" style="width:32px;">
+				<div class="payment_history_cell_year" style="height:10px;background:#E1A758;">
+						&nbsp;	</div>
+				<div class="payment_history_cell_month">
+				7			</div>
+			</div>
+		</div>
+		<div class="pcode">Bankruptcy Chapter 13 Petitioned, or Discharged and Bankruptcy Chapter 13 Reaffirmation of Debt Rescinded</div>
+	</div></div><div class="panel-right3">
+	<div class="paymentcode">
+		<div class="monopoly">
+			<div class="payment_history_cell_wrapper" style="width:32px;">
+				<div class="payment_history_cell_year" style="height:10px;background:#E1A758;">
+						&nbsp;	</div>
+				<div class="payment_history_cell_month">
+				8			</div>
+			</div>
+		</div>
+		<div class="pcode">Foreclosure Proceedings Started, Deed in Lieu, or Voluntary Surrender, or Repossession</div>
+	</div>
+	<div class="paymentcode">
+		<div class="monopoly">
+			<div class="payment_history_cell_wrapper" style="width:32px;">
+				<div class="payment_history_cell_year" style="height:10px;background:#BF5048;">
+						&nbsp;	</div>
+				<div class="payment_history_cell_month">
+				9			</div>
+			</div>
+		</div>
+		<div class="pcode">Settled, Insurance Claim, Term Default, Government Claim, Paid by Dealer, BK Chapter 7, 11 or 12 Petitioned, or Discharged and BK Chapter 7, 11 or 12 Reaffirmation of Debt Rescinded, or Collection, or Charge Off</div>
+	</div>
+	<div class="paymentcode">
+		<div class="monopoly">
+			<div class="payment_history_cell_wrapper" style="width:32px;">
+				<div class="payment_history_cell_year" style="height:10px;background:#57AD68;">
+						&nbsp;	</div>
+				<div class="payment_history_cell_month">
+				C			</div>
+			</div>
+		</div>
+		<div class="pcode">Current</div>
+	</div>
+	<div class="paymentcode">
+		<div class="monopoly">
+			<div class="payment_history_cell_wrapper" style="width:32px;">
+				<div class="payment_history_cell_year" style="height:10px;background:#727272;">
+						&nbsp;	</div>
+				<div class="payment_history_cell_month">
+				B			</div>
+			</div>
+		</div>
+		<div class="pcode">Account Condition Changed &ndash; Payment Code Not Applicable</div>
+	</div>
+	<div class="paymentcode">
+		<div class="monopoly">
+			<div class="payment_history_cell_wrapper" style="width:32px;">
+				<div class="payment_history_cell_year" style="height:10px;background:#57AD68;">
+						&nbsp;	</div>
+				<div class="payment_history_cell_month">
+				N			</div>
+			</div>
+		</div>
+		<div class="pcode">Current with zero balance</div>
+	</div>
+	<div class="paymentcode">
+		<div class="monopoly">
+			<div class="payment_history_cell_wrapper" style="width:32px;">
+				<div class="payment_history_cell_year" style="height:10px;background:#727272;">
+						&nbsp;	</div>
+				<div class="payment_history_cell_month">
+				-			</div>
+			</div>
+		</div>
+		<div class="pcode">No update received</div>
+	</div></div>
+
+<div style="clear:both;"><br></div>
+
+
+<!---- start good stuff -->
+<!---- end good stuff -->
+
+<!---- Payment/History END -->
+
+
+</div>
+</div><!-- end tab 2 -->
+
+
+<!---- (3)Inquiries---------------------------------------------------------------->
+
+<div id="tab_3">
+	<div style="padding:20px 20px 0px 20px;">
+	<h3 style="margin-top:0px;">
+	  - Inquiries
+	</h3>
+	</div>
+<div style="padding:20px 20px 0px 20px;">
+
+	<div style="margin-bottom: 0px;">
+	When one applies for credit, one authorizes lenders or other financial institutions  to ask or 'inquire' for a copy of your credit report from a credit bureau for their review. When you later check your Credit Report you may notice that their credit inquiries are listed.
+
+		You may also see  inquiries by businesses that you may not know. The only inquiries that work toward your score are the ones that result from applications for new credit.
+	</div>
+
+</div>
+<br>
+<div style="clear:both;height:10px;"></div>
+<div class="summarycontainer">
+	<div class="creditheader">Inquiries Summary</div>
+	<table class="reportsummary">
+	<tr><td>Total Inquiries</td><td>0</td></tr>
+	<tr><td>Inquiries in Past 6 Months</td><td>0</td></tr>
+	<tr><td>Inquiries in Past 12 Months</td><td>0</td></tr>
+	<tr><td>Inquiries in Past 24 Months</td><td>0</td></tr>
+	</table>
+	<br>
+
+
+<b>This Report Does Not List any Inquiries.</b>
+
+<br>
+<br>
+
+
+<div style="clear:both;"></div>
+</div>
+</div><!-- end tab 3 -->
+
+<!---- (6)Public Records---------------------------------------------------------------->
+
+
+<div id="tab_6">
+	<div style="padding:20px 20px 0px 20px;">
+	<h3 style="margin-top:0px;">
+	  - Public Records
+	</h3>
+	</div>
+<div style="padding:20px 20px 0px 20px;">
+
+<div style="margin-bottom: 0px;">Information in this area is derived from  state and county court records, federal district bankruptcy records, tax liens and monetary judgments & in some states, overdue child support records. Public records stay on your credit report for 7-10 years.
+<br>
+<br>
+
+Most consumers do not have public records information on their credit reports. There is no need to be concerned if no information is available in this view of your credit report profile.</div>
+
+
+<br>
+<br>
+
+<div><b>This Report Does Not List any Public Records.</b></div>
+  <!--// end if has public_record ?>-->
+<br>
+<br>
+
+
+<div style="clear:both;"></div>
+</div><!-- end ctabs col 3 wrapper -->
+</div><!-- end tab 6 -->
+
+
+<div style="clear:both;"></div>
+
+</div><!-- close wrapper -->
+
+<div style="clear:both;"></div>
+
+
+<script>
+
+function do_ctabs(which) {
+
+	hide_ctabs();
+	document.getElementById('tab_' + which).style.display = 'block';
+	$('#tab_' + which+ '_l').addClass( "active" );
+}
+
+function hide_ctabs() {
+
+	$('#tab_0_l, #tab_1_l, #tab_2_l, #tab_3_l, #tab_5_l, #tab_6_l').removeClass( "active" );
+
+	document.getElementById('tab_0').style.display = 'none';
+	document.getElementById('tab_1').style.display = 'none';
+	document.getElementById('tab_2').style.display = 'none';
+	document.getElementById('tab_3').style.display = 'none';
+	document.getElementById('tab_6').style.display = 'none';
+}
+
+do_ctabs(0);
+
+</script>
+
+
+
+</div><!-- End Content Column -->
+<div style="clear:both;"></div>
+
+</div><!-- end clientarea bg -->
+

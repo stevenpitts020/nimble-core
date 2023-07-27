@@ -1,0 +1,72 @@
+Identity:
+  type: object
+  properties:
+    firstName:
+      type: string
+      title: First Name
+      description: The first name of the individual
+      nullable: true
+      example: Sample
+    middleName:
+      type: string
+      title: Middle Name
+      description: The middle name of the individual
+      nullable: true
+      example: ''
+    lastName:
+      type: string
+      title: Last Name
+      description: The last name of the individual
+      nullable: true
+      example: Specimen
+    address:
+      type: string
+      title: Address
+      description: Individual address
+      nullable: true
+      example: 123 Main Streey Apt. 1
+    city:
+      type: string
+      title: City
+      description: Individual city
+      nullable: true
+      example: ORLANDO
+    state:
+      type: string
+      title: State
+      description: Individual state
+      nullable: true
+      example: FL
+    zipCode:
+      type: string
+      title: Zip code
+      description: Individual zip code
+      nullable: true
+      example: 17101-0000
+    dateOfBirth:
+      type: string
+      format: date
+      title: dateOfBirth
+      description: Individual date of birth
+      nullable: true
+      example: 1990-3-18
+    documentNumber:
+      type: string
+      title: Document Number
+      description: Document Number
+      nullable: true
+      example: S123-456-78-123-0
+    documentExpirationDate:
+      type: string
+      format: date
+      title: Document Expiration Date
+      description: Document Expiration Date
+      nullable: true
+      example: 2025-3-18
+    documentIssuedDate:
+      type: string
+      format: date
+      title: Document Issued Date
+      description: Document Issued Date
+      nullable: true
+      example: 2025-3-18

@@ -1,0 +1,33 @@
+User:
+  type: object
+  required:
+    - id
+  properties:
+    id:
+      type: string
+      format: uuidv4
+      title: User ID
+      description: The machine unique identifier of the user
+      readOnly: true
+      example: 1052ab85-08da-4bb5-be00-9e94d282d310
+    firstName:
+      type: string
+      title: First Name
+      description: The first name of the user
+      example: Sample
+    lastName:
+      type: string
+      title: Last Name
+      description: The last name of the user
+      example: Specimen
+    email:
+      type: string
+      title: Email
+      description: The email of the user
+      example: demouser@nimblefi.com
+    createdAt:
+      type: string
+      format: date-time
+      title: Creation Date
+      description: The date and time this user record entered the system
+      readOnly: true

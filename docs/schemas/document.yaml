@@ -1,0 +1,41 @@
+Document:
+  type: object
+  required:
+    - id
+    - content
+    - format
+    - createdAt
+  properties:
+    id:
+      type: string
+      format: uuidv4
+      title: Document unique id
+      readOnly: true
+      description: signer identifier
+      example: a74f9092-5889-430a-9c19-6712f9f68090
+    institutionId:
+      type: string
+      format: uuidv4
+      title: Uploading document on behalf of this Institution
+      writeOnly: true
+      description: institution identifier
+      example: a74f9092-5889-430a-9c19-6712f9f68090
+    content:
+      type: string
+      format: byte
+      title: Document content in Base64 format
+      description: Document content in Base64 format
+      writeOnly: true
+      example: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkSP/0HwAEIgJaKSK+YQAAAABJRU5ErkJggg==
+    format:
+      type: string
+      title: Document format identifier
+      enum: ['image', 'pdf']
+      description: The document format identifier
+      example: image
+    createdAt:
+      type: string
+      format: date-time
+      title: Creation Date
+      description: The date and time the document was created in the system
+      readOnly: true

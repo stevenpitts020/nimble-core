@@ -1,0 +1,12 @@
+Contract:
+  type: object
+  required:
+    - uri
+  properties:
+    uri:
+      type: string
+      format: uri
+      title: contract uri
+      readOnly: true
+      description: account request's contract uri
+      example: https://api.nimblefi.com/v1/documents/1052ab85-08da-4bb5-be00-9e94d282d310?token=8mAABig0OH9lja2um.8mAABig0OH9lja2um.8mAABig0OH9lja2um

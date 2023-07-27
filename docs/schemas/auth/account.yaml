@@ -1,0 +1,23 @@
+Account:
+  type: object
+  required:
+    - strategy
+  properties:
+    strategy:
+      type: string
+      title: Strategy
+      description: The strategy used to identify the user using this account
+      readOnly: true
+      example: local
+    remoteId:
+      type: string
+      title: Remote ID
+      description: >-
+        If the strategy involves a third party, this is the user identifier on that platform
+      readOnly: true
+    createdAt:
+      type: string
+      format: date-time
+      title: Creation Date
+      description: The date and time the account record entered the system
+      readOnly: true

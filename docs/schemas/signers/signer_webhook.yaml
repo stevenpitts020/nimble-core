@@ -1,0 +1,15 @@
+SignerWebhook:
+  type: object
+  required:
+    - reference
+    - event
+  properties:
+    reference:
+      type: string
+      format: uuidv4
+      title: signer reference uuid
+      description: signer id
+    event:
+      type: string
+      title: shufti verification status
+      description: Shufti verification event status

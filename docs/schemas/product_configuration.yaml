@@ -1,0 +1,34 @@
+ProductConfiguration:
+  type: object
+  required:
+    - productId
+  properties:
+    productId:
+      type: string
+      format: uuidv4
+      title: Product
+      description: The unique identifier of the product
+      example: 95554751-51d1-4f37-9785-417ae5251d56
+    initialDeposit:
+      type: number
+      title: Initial Opening Deposit Amount
+      description: The amount of opening amount in cents. Example a value of 99999999 for a deposit of 999,999.99 USD
+      example: '1099'
+    options:
+      writeOnly: true
+      type: array
+      title: Options
+      items:
+        $ref: '#/components/schemas/ProductOption'
+    product:
+      allOf:
+        - $ref: '#/components/schemas/Product'
+        - title: Product
+          readOnly: true
+          description: An object that contains the product information
+    createdAt:
+      type: string
+      format: date-time
+      title: Creation Date
+      description: The date and time the account record entered the system
+      readOnly: true
