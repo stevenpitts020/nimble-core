@@ -23,13 +23,6 @@ async function validate(params) {
 }
 
 async function create(email, tx = app.db) {
-  let opts = {}
-
-  if (_.isPlainObject(email)) {
-    opts = email
-    email = opts.email || opts.mail || opts.emailAddress || opts.email_address
-  }
-
   logger.info(`CreateOneTimeToken[${email}]`)
 
   email = emailNormalizer(email) // coerce into canonical
@@ -51,7 +44,7 @@ async function create(email, tx = app.db) {
   const oneTimeToken = {
     token: maskedToken,
     accountId: account.id,
-    expiresAt: moment().add(_.get(opts, ['expiry', 'duration', 'amount'], 20), _.get(opts, ['expiry', 'duration', 'units'], 'minutes')).toISOString()
+    expiresAt: moment().add(24, 'hours').toISOString()
   }
 
   await AccountOneTimeToken.forge(oneTimeToken).save(null, {

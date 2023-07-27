@@ -128,7 +128,6 @@ module.exports = function routerDecorator(router) {
   router.patch('/v1/data/searches/:id', auth(), asyncWrapper(app.controllers.v1.data.searchUpdate))
 
   router.get('/v1/data/api', auth(), asyncWrapper(app.controllers.v1.data.api))
-  router.get('/v1/data/profile', auth(), asyncWrapper(app.controllers.v1.data.profile))
 
   // wkfl
   const _ = require('lodash')
@@ -173,25 +172,4 @@ module.exports = function routerDecorator(router) {
       res.json({ id: runId, actions })
     })
   })
-
-  const CAR_PRICE = 'http://api.marketcheck.com/v2/predict/car/price'
-  const CAR_PRICE_HEADERS_HOST = 'marketcheck-prod.apigee.net'
-  router.get('/v1/vin', auth(), (req, res, next) => {
-    axios.get(CAR_PRICE, {
-        headers: { host: CAR_PRICE_HEADERS_HOST },
-        params: {
-          car_type: 'used',
-          api_key: 'btEAEMbitBoRtmJc9DNVN9Aj57hbo9my',
-          vin: req.query.vin,
-          miles: req.query.miles,
-          zip: req.query.zip
-        }
-      }
-    ).then(price => {
-      res.json(price.data)
-    }).catch(err => {
-      next(err)
-    })
-  })
 }
-
